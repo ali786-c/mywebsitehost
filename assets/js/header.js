@@ -505,23 +505,21 @@ const zedgeHeaderHTML = `
 </header>
 `;
 
-document.addEventListener("DOMContentLoaded", function() {
-    function injectHTML() {
-        let headerContainer = document.getElementById("zedge-header");
-        if (headerContainer) {
-            headerContainer.innerHTML = zedgeHeaderHTML;
-        }
+function injectZedgeHeaderHTML() {
+    let headerContainer = document.getElementById("zedge-header");
+    if (headerContainer) {
+        headerContainer.innerHTML = zedgeHeaderHTML;
     }
+}
 
-    if (!document.getElementById("zedge-header-css")) {
-        let cssLink = document.createElement("link");
-        cssLink.id = "zedge-header-css";
-        cssLink.rel = "stylesheet";
-        cssLink.href = "assets/css/header.css";
-        cssLink.onload = injectHTML;
-        cssLink.onerror = injectHTML;
-        document.head.appendChild(cssLink);
-    } else {
-        injectHTML();
-    }
-});
+if (!document.getElementById("zedge-header-css")) {
+    let cssLink = document.createElement("link");
+    cssLink.id = "zedge-header-css";
+    cssLink.rel = "stylesheet";
+    cssLink.href = "assets/css/header.css";
+    document.head.appendChild(cssLink);
+}
+
+// Since the script is typically placed after the #zedge-header div, 
+// we can inject immediately to avoid delay.
+injectZedgeHeaderHTML();

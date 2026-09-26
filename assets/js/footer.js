@@ -140,23 +140,21 @@ const zedgeFooterHTML = `
 </footer>
 `;
 
-document.addEventListener("DOMContentLoaded", function() {
-    function injectHTML() {
-        let footerContainer = document.getElementById("zedge-footer");
-        if (footerContainer) {
-            footerContainer.innerHTML = zedgeFooterHTML;
-        }
+function injectZedgeFooterHTML() {
+    let footerContainer = document.getElementById("zedge-footer");
+    if (footerContainer) {
+        footerContainer.innerHTML = zedgeFooterHTML;
     }
+}
 
-    if (!document.getElementById("zedge-footer-css")) {
-        let cssLink = document.createElement("link");
-        cssLink.id = "zedge-footer-css";
-        cssLink.rel = "stylesheet";
-        cssLink.href = "assets/css/footer.css";
-        cssLink.onload = injectHTML;
-        cssLink.onerror = injectHTML;
-        document.head.appendChild(cssLink);
-    } else {
-        injectHTML();
-    }
-});
+if (!document.getElementById("zedge-footer-css")) {
+    let cssLink = document.createElement("link");
+    cssLink.id = "zedge-footer-css";
+    cssLink.rel = "stylesheet";
+    cssLink.href = "assets/css/footer.css";
+    document.head.appendChild(cssLink);
+}
+
+// Since the script is typically placed after the #zedge-footer div,
+// we can inject immediately to avoid delay.
+injectZedgeFooterHTML();
