@@ -18,7 +18,7 @@ const zedgeFooterHTML = `
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="footer__widget">
-              <div class="footer__logo mb-15"> <a href="index.html"><img src="assets/img/logo.svg" alt="logo"></a> </div>
+              <div class="footer__logo mb-15"> <a href="https://www.zedgehost.com/"><img src="assets/img/logo.svg" alt="logo"></a> </div>
               <div class="footer__content footer__content-two">
                 <p>Zedgehost is a modern HTML and WHMCS hosting theme designed for web hosting and domain providers.</p>
               </div>

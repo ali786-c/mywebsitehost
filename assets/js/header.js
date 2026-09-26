@@ -111,7 +111,7 @@ const zedgeHeaderHTML = `
         <div class="col-12">
           <div class="tgmenu__wrap">
             <nav class="tgmenu__nav">
-              <div class="logo"> <a href="index.html"><img src="assets/img/logo.svg" alt="Logo"></a> </div>
+              <div class="logo"> <a href="https://www.zedgehost.com/"><img src="assets/img/logo.svg" alt="Logo"></a> </div>
               <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
                 <ul class="navigation">
                   <li><a href="index.html">Home</a></li>
@@ -296,7 +296,7 @@ const zedgeHeaderHTML = `
   <div class="tgmobile__menu">
     <nav class="tgmobile__menu-box">
       <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
-      <div class="nav-logo"> <a href="index.html"><img src="assets/img/logo.svg" alt="Logo"></a> </div>
+      <div class="nav-logo"> <a href="https://www.zedgehost.com/"><img src="assets/img/logo.svg" alt="Logo"></a> </div>
       <div class="tgmobile__menu-outer"> 
         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> 
       
