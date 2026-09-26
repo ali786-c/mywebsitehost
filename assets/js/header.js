@@ -506,9 +506,13 @@ const zedgeHeaderHTML = `
 `;
 
 function injectZedgeHeaderHTML() {
-    let headerContainer = document.getElementById("zedge-header");
-    if (headerContainer) {
-        headerContainer.innerHTML = zedgeHeaderHTML;
+    if (document.currentScript && document.currentScript.parentNode) {
+        document.currentScript.outerHTML = zedgeHeaderHTML;
+    } else {
+        let headerContainer = document.getElementById("zedge-header");
+        if (headerContainer) {
+            headerContainer.innerHTML = zedgeHeaderHTML;
+        }
     }
 }
 
@@ -520,6 +524,4 @@ if (!document.getElementById("zedge-header-css")) {
     document.head.appendChild(cssLink);
 }
 
-// Since the script is typically placed after the #zedge-header div, 
-// we can inject immediately to avoid delay.
 injectZedgeHeaderHTML();

@@ -141,9 +141,13 @@ const zedgeFooterHTML = `
 `;
 
 function injectZedgeFooterHTML() {
-    let footerContainer = document.getElementById("zedge-footer");
-    if (footerContainer) {
-        footerContainer.innerHTML = zedgeFooterHTML;
+    if (document.currentScript && document.currentScript.parentNode) {
+        document.currentScript.outerHTML = zedgeFooterHTML;
+    } else {
+        let footerContainer = document.getElementById("zedge-footer");
+        if (footerContainer) {
+            footerContainer.innerHTML = zedgeFooterHTML;
+        }
     }
 }
 
@@ -155,6 +159,4 @@ if (!document.getElementById("zedge-footer-css")) {
     document.head.appendChild(cssLink);
 }
 
-// Since the script is typically placed after the #zedge-footer div,
-// we can inject immediately to avoid delay.
 injectZedgeFooterHTML();
