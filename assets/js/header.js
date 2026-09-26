@@ -36,7 +36,7 @@ const zedgeHeaderHTML = `
                 </div>
               </li>
               <li class="header-dropdown-wrap dropdown">
-                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Currency
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">PKR
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_464_4901)">
                     <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -50,7 +50,7 @@ const zedgeHeaderHTML = `
                 </button>
                 <div class="dropdown-menu">
                   <ul class="top-menu">
-                    <li><a href="index.html">INR</a></li>
+                    <li><a href="index.html">PKR</a></li>
                     <li><a href="index.html">USD</a></li>
                   </ul>
                 </div>
