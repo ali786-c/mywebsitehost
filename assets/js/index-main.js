@@ -178,6 +178,9 @@ var brandSwiper = new Swiper('.hosting-active', {
         nextEl: ".hosting-button-next",
         prevEl: ".hosting-button-prev"
     },
+    mousewheel: {
+        forceToAxis: true,
+    },
 });
 
 
