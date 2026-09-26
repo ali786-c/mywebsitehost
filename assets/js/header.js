@@ -466,3 +466,25 @@ window.setCurrency = function(curr) {
     const event = new Event('currencyChanged');
     window.dispatchEvent(event);
 };
+
+function updateCurrencyDisplay() {
+    const currency = localStorage.getItem('selectedCurrency') || 'PKR';
+    const elements = document.querySelectorAll('.currency-display');
+    elements.forEach(el => {
+        if (currency === 'USD') {
+            el.textContent = el.getAttribute('data-usd');
+        } else {
+            el.textContent = el.getAttribute('data-pkr');
+        }
+    });
+    
+    const currencyBtn = document.getElementById('currency-btn-text');
+    if (currencyBtn) {
+        currencyBtn.textContent = currency;
+    }
+}
+
+window.addEventListener('currencyChanged', updateCurrencyDisplay);
+document.addEventListener("DOMContentLoaded", updateCurrencyDisplay);
+// Run immediately as well in case DOM is already parsed or to apply fast
+updateCurrencyDisplay();
