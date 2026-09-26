@@ -218,39 +218,7 @@ const zedgeHeaderHTML = `
                       </div>
                     </div>
                   <div class="dropdown-btn"><span class="plus-line"></span></div></li>
-                  <li class="menu-item-has-children tg-mega-menu-has-children"><a href="index.html">Support &amp; Billing
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_464_4901)">
-                        <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_464_4901">
-                          <rect width="16" height="16" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    </a>
-                    <ul class="tg-mega-menu-wrap tg-mega-menu-wrap-four">
-                      <li>
-                        <ul class="mega-sub-menu">
-                          <li><a href="index.html">Open Ticket</a></li>
-                          <li><a href="index.html">Tickets</a></li>
-                          <li><a href="index.html">Announcements</a></li>
-                          <li><a href="index.html">Knowledgebase</a></li>
-                          <li><a href="index.html">Network Status</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="mega-sub-menu">
-                          <li><a href="index.html">My Invoices</a></li>
-                          <li><a href="index.html">My Quotes</a></li>
-                          <li><a href="index.html">Mass Payment</a></li>
-                          <li><a href="index.html">Affiliates</a></li>
-                          <li><a href="index.html">Contact Us</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  <div class="dropdown-btn"><span class="plus-line"></span></div></li>
+
                   <li><a href="contact-us.html">Contact</a></li>
                 </ul>
               </div>
@@ -437,39 +405,7 @@ const zedgeHeaderHTML = `
                       </div>
                     </div>
                   <div class="dropdown-btn"><span class="plus-line"></span></div></li>
-                  <li class="menu-item-has-children tg-mega-menu-has-children"><a href="index.html">Support &amp; Billing
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_464_4901)">
-                        <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_464_4901">
-                          <rect width="16" height="16" fill="white"></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    </a>
-                    <ul class="tg-mega-menu-wrap tg-mega-menu-wrap-four">
-                      <li>
-                        <ul class="mega-sub-menu">
-                          <li><a href="index.html">Open Ticket</a></li>
-                          <li><a href="index.html">Tickets</a></li>
-                          <li><a href="index.html">Announcements</a></li>
-                          <li><a href="index.html">Knowledgebase</a></li>
-                          <li><a href="index.html">Network Status</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="mega-sub-menu">
-                          <li><a href="index.html">My Invoices</a></li>
-                          <li><a href="index.html">My Quotes</a></li>
-                          <li><a href="index.html">Mass Payment</a></li>
-                          <li><a href="index.html">Affiliates</a></li>
-                          <li><a href="index.html">Contact Us</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  <div class="dropdown-btn"><span class="plus-line"></span></div></li>
+
                   <li><a href="contact-us.html">Contact</a></li>
                 </ul>
               </div>
