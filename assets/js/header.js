@@ -9,7 +9,7 @@ const zedgeHeaderHTML = `
             <div class="tg-header__top-content-left">
               <p>Offer <span>Hosting Cloud</span> Ultra-fast Performance!</p>
             </div>
-            <a href="index.html" class="tg-header__top-btn" aria-label="Cloud Hosting Offer">Click here</a> </div>
+            <a href="cloud-hosting.html" class="tg-header__top-btn" aria-label="Cloud Hosting Offer">Click here</a> </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="d-flex justify-content-center justify-content-lg-end">
@@ -93,8 +93,8 @@ const zedgeHeaderHTML = `
                 <div class="dropdown-menu">
                   <ul class="top-menu">
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="index.html">Register</a></li>
-                    <li><a href="index.html">Forgot Password?</a></li>
+                    <li><a href="sign-up.html">Register</a></li>
+                    <li><a href="forgot-password.html">Forgot Password?</a></li>
                   </ul>
                 </div>
               </li>
