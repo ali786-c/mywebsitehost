@@ -20,7 +20,7 @@ const zedgeFooterHTML = `
             <div class="footer__widget">
               <div class="footer__logo mb-15"> <a href="https://www.zedgehost.com/"><img src="assets/img/logo.svg" alt="logo"></a> </div>
               <div class="footer__content footer__content-two">
-                <p>Zedgehost is a modern HTML and WHMCS hosting theme designed for web hosting and domain providers.</p>
+                <p>Zedgehost provides reliable, ultra-fast, and secure web hosting, VPS, and domain registration services to empower your online journey.</p>
               </div>
               <div class="footer__social footer__social-two"> <span class="title">Get Connected</span>
                 <ul class="list-wrap">
@@ -124,14 +124,14 @@ const zedgeFooterHTML = `
           <div class="footer__bottom-menu">
             <ul class="list-wrap">
               <li> <a href="legal.html">Terms &amp; Conditions</a> </li>
-              <li> <a href="policy.html">Refund Policy</a> </li>
+              <li> <a href="refund-policy.html">Refund Policy</a> </li>
               <li> <a href="policy.html">Privacy Policy</a> </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="copy-right-text">
-            <p>@ 2025 <span>Zedgehost</span> All Right Reserved. Designed and Developed by RedCheap.</p>
+            <p>&copy; 2026 <span>Zedgehost</span>. All Rights Reserved.</p>
           </div>
         </div>
       </div>
