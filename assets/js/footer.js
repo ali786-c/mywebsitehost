@@ -104,12 +104,7 @@ const zedgeFooterHTML = `
           </div>
           <div class="col-md-4">
             <div class="footer__cart-content-right">
-                <a href="index.html">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.8667 11.5282C11.8667 11.5282 11.918 11.4916 12 11.4289C13.2287 10.4789 14 9.10222 14 7.56955C14 4.71222 11.3133 2.39355 8 2.39355C4.68667 2.39355 2 4.71222 2 7.56955C2 10.4282 4.68667 12.6669 8 12.6669C8.28267 12.6669 8.74667 12.6482 9.392 12.6109C10.2333 13.1576 11.4613 13.6062 12.536 13.6062C12.8687 13.6062 13.0253 13.3329 12.812 13.0542C12.488 12.6569 12.0413 12.0202 11.868 11.5276L11.8667 11.5282Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M5 9C6.66667 10.6667 9.33333 10.6667 11 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              Live Chat </a>
+
               
             </div>
           </div>

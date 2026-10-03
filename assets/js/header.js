@@ -243,19 +243,7 @@ const zedgeHeaderHTML = `
                       <div class="header-dropdown-questions"> <span>Help Center</span>
                         <div class="header-dropdown-questions-inner"> <a href="tel:0123456789" class="phone">+91 123 456 7899</a> <a href="mailto:info@zedgehost.com" class="mail">info@zedgehost.com</a> </div>
                       </div>
-                      <a href="index.html" class="tg-btn tg-btn-two">
-                      <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_529_1214)">
-                          <path d="M11.8667 12.0282C11.8667 12.0282 11.918 11.9916 12 11.9289C13.2287 10.9789 14 9.60222 14 8.06955C14 5.21222 11.3133 2.89355 8 2.89355C4.68667 2.89355 2 5.21222 2 8.06955C2 10.9282 4.68667 13.1669 8 13.1669C8.28267 13.1669 8.74667 13.1482 9.392 13.1109C10.2333 13.6576 11.4613 14.1062 12.536 14.1062C12.8687 14.1062 13.0253 13.8329 12.812 13.5542C12.488 13.1569 12.0413 12.5202 11.868 12.0276L11.8667 12.0282Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M5 9.5C6.66667 11.1667 9.33333 11.1667 11 9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_529_1214">
-                            <rect width="16" height="16" fill="currentColor" transform="translate(0 0.5)"></rect>
-                          </clipPath>
-                        </defs>
-                      </svg>
-                      Live Chat </a>
+
                       <div class="header-dropdown-contact"> <span class="title">Feel free to contact with us</span> <a href="contact-us.html">Contact us
                         <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M12.75 5.75L5.25 13.25" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
