@@ -1,7 +1,7 @@
 # SEO Audit: Shared Hosting Page
 
 ## Page summary
-- URL: https://www.zedgehost.com/shared-hosting.html
+- URL: https://zedgehost.com/shared-hosting.html
 - Target query: shared hosting in Pakistan
 - Role: service landing page
 

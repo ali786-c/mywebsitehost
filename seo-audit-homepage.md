@@ -1,7 +1,7 @@
 # SEO Audit: Homepage
 
 ## Page summary
-- URL: https://www.zedgehost.com/
+- URL: https://zedgehost.com/
 - Target query: web hosting in Pakistan
 - Role: commercial landing page
 

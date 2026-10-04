@@ -21,4 +21,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://www.zedgehost.com/sitemap.xml
+Sitemap: https://zedgehost.com/sitemap.xml

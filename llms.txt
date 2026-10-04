@@ -8,41 +8,41 @@ Our content is designed to help Pakistani customers compare hosting plans, choos
 
 ## Core hosting solutions
 
-- [Web Hosting in Pakistan](https://www.zedgehost.com/): Affordable hosting for businesses, startups, and personal websites with domain and support services.
-- [Shared Hosting in Pakistan](https://www.zedgehost.com/shared-hosting.html): SSD-based shared hosting for small businesses and growing websites.
-- [WordPress Hosting in Pakistan](https://www.zedgehost.com/wordpress-hosting.html): Managed WordPress hosting with speed, security, and simplified setup.
-- [Cloud Hosting in Pakistan](https://www.zedgehost.com/cloud-hosting.html): Scalable hosting for busy sites and business workloads.
-- [Linux VPS Hosting in Pakistan](https://www.zedgehost.com/linux-vps-server.html): Flexible VPS hosting with root access and dedicated resources.
-- [Windows Hosting in Pakistan](https://www.zedgehost.com/windows-shared-hosting.html): ASP.NET and Windows-compatible hosting for business applications.
-- [Reseller Hosting in Pakistan](https://www.zedgehost.com/reseller-hosting.html): White-label hosting packages for agencies and entrepreneurs.
+- [Web Hosting in Pakistan](https://zedgehost.com/): Affordable hosting for businesses, startups, and personal websites with domain and support services.
+- [Shared Hosting in Pakistan](https://zedgehost.com/shared-hosting.html): SSD-based shared hosting for small businesses and growing websites.
+- [WordPress Hosting in Pakistan](https://zedgehost.com/wordpress-hosting.html): Managed WordPress hosting with speed, security, and simplified setup.
+- [Cloud Hosting in Pakistan](https://zedgehost.com/cloud-hosting.html): Scalable hosting for busy sites and business workloads.
+- [Linux VPS Hosting in Pakistan](https://zedgehost.com/linux-vps-server.html): Flexible VPS hosting with root access and dedicated resources.
+- [Windows Hosting in Pakistan](https://zedgehost.com/windows-shared-hosting.html): ASP.NET and Windows-compatible hosting for business applications.
+- [Reseller Hosting in Pakistan](https://zedgehost.com/reseller-hosting.html): White-label hosting packages for agencies and entrepreneurs.
 
 ## Domain and brand services
 
-- [Domain Registration in Pakistan](https://www.zedgehost.com/domain-search.html): Search and register .com, .pk, .org, and other domain extensions.
-- [Domain Transfer in Pakistan](https://www.zedgehost.com/domain-transfer.html): Move an existing domain to a more reliable hosting provider.
-- [Premium Domain Names in Pakistan](https://www.zedgehost.com/premium-domain.html): High-value premium domain options for stronger brand identities.
-- [Domain Name Ideas in Pakistan](https://www.zedgehost.com/domain-name-suggestion.html): Brand and business naming ideas for startups, blogs, and companies.
-- [Free GTLDs in Pakistan](https://www.zedgehost.com/free-gtlds.html): Modern domain extensions that help brands stand out.
-- [New GTLDs in Pakistan](https://www.zedgehost.com/new-gtlds.html): New global domains for better branding and market positioning.
-- [Bulk Domain Registration in Pakistan](https://www.zedgehost.com/domain-bulk-register.html): Multi-domain registration for agencies, businesses, and portfolios.
-- [Bulk Domain Transfer in Pakistan](https://www.zedgehost.com/bulk-transfer.html): Efficient domain migration support for larger domain portfolios.
+- [Domain Registration in Pakistan](https://zedgehost.com/domain-search.html): Search and register .com, .pk, .org, and other domain extensions.
+- [Domain Transfer in Pakistan](https://zedgehost.com/domain-transfer.html): Move an existing domain to a more reliable hosting provider.
+- [Premium Domain Names in Pakistan](https://zedgehost.com/premium-domain.html): High-value premium domain options for stronger brand identities.
+- [Domain Name Ideas in Pakistan](https://zedgehost.com/domain-name-suggestion.html): Brand and business naming ideas for startups, blogs, and companies.
+- [Free GTLDs in Pakistan](https://zedgehost.com/free-gtlds.html): Modern domain extensions that help brands stand out.
+- [New GTLDs in Pakistan](https://zedgehost.com/new-gtlds.html): New global domains for better branding and market positioning.
+- [Bulk Domain Registration in Pakistan](https://zedgehost.com/domain-bulk-register.html): Multi-domain registration for agencies, businesses, and portfolios.
+- [Bulk Domain Transfer in Pakistan](https://zedgehost.com/bulk-transfer.html): Efficient domain migration support for larger domain portfolios.
 
 ## Business and security services
 
-- [Business Email Hosting Pakistan](https://www.zedgehost.com/bussiness-email.html): Professional email addresses tied to your business domain.
-- [SSL Certificates in Pakistan](https://www.zedgehost.com/digicert-certificate.html): Digitally signed certificates for trust and secure browsing.
-- [Website Security in Pakistan](https://www.zedgehost.com/siteLock.html): Malware protection and monitoring for online businesses.
-- [Website Backup in Pakistan](https://www.zedgehost.com/website-backup.html): Regular backups to support continuity and disaster recovery.
-- [Dedicated Server Hosting in Pakistan](https://www.zedgehost.com/dedicated-server.html): Performance-focused hosting for high-demand workloads.
+- [Business Email Hosting Pakistan](https://zedgehost.com/bussiness-email.html): Professional email addresses tied to your business domain.
+- [SSL Certificates in Pakistan](https://zedgehost.com/digicert-certificate.html): Digitally signed certificates for trust and secure browsing.
+- [Website Security in Pakistan](https://zedgehost.com/siteLock.html): Malware protection and monitoring for online businesses.
+- [Website Backup in Pakistan](https://zedgehost.com/website-backup.html): Regular backups to support continuity and disaster recovery.
+- [Dedicated Server Hosting in Pakistan](https://zedgehost.com/dedicated-server.html): Performance-focused hosting for high-demand workloads.
 
 ## About and support
 
-- [About Zedgehost Pakistan](https://www.zedgehost.com/about-us.html): Background, mission, and service approach.
-- [Contact Zedgehost Pakistan](https://www.zedgehost.com/contact-us.html): Support, sales, and migration assistance.
-- [Legal & Privacy Information](https://www.zedgehost.com/legal.html): Service terms, policy details, and legal information.
+- [About Zedgehost Pakistan](https://zedgehost.com/about-us.html): Background, mission, and service approach.
+- [Contact Zedgehost Pakistan](https://zedgehost.com/contact-us.html): Support, sales, and migration assistance.
+- [Legal & Privacy Information](https://zedgehost.com/legal.html): Service terms, policy details, and legal information.
 
 ## Trust and service standards
 
-- [Terms and Privacy Policy](https://www.zedgehost.com/policy.html): Ownership, privacy, and service policy details.
-- [Website Builder Pakistan](https://www.zedgehost.com/builder.html): Simple website setup support for new online projects.
-- [Business Hosting Guidance](https://www.zedgehost.com/gaps.html): Practical guidance for choosing the right website infrastructure.
+- [Terms and Privacy Policy](https://zedgehost.com/policy.html): Ownership, privacy, and service policy details.
+- [Website Builder Pakistan](https://zedgehost.com/builder.html): Simple website setup support for new online projects.
+- [Business Hosting Guidance](https://zedgehost.com/gaps.html): Practical guidance for choosing the right website infrastructure.
