@@ -41,13 +41,14 @@
   - **Title:** `Cheap Web Hosting in Pakistan | Affordable Shared Hosting - Zedgehost`
   - **H1:** `Cheap Web Hosting in Pakistan starting from Rs. 200/Month`
 
-- [ ] **DAY 4: WordPress & VPS Server Pages (`wordpress-hosting.html`, `linux-vps-server.html`)**
+- [x] **DAY 4: WordPress & VPS Server Pages (`wordpress-hosting.html`, `linux-vps-server.html`)** (COMPLETED ✅)
   - **Target Keywords:** `wordpress hosting pakistan` & `vps hosting pakistan`
-  - **Action:** Optimize H1/H2 tags and feature tables with PKR pricing.
+  - **Action:** Optimized H1/H2 tags, titles, meta descriptions, PKR pricing, and Product + Service + FAQ JSON-LD schemas.
+  - **High-Level Blog Created:** Created dedicated SEO guide [`best-wordpress-hosting-in-pakistan.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/best-wordpress-hosting-in-pakistan.html) with BlogPosting, FAQPage, & BreadcrumbList schemas.
 
-- [ ] **DAY 5: Local PKR Payment & Geo Signals**
-  - **Action:** Inject local Pakistan geo-tags (`geo.region: PK`, `geo.placename: Pakistan`, `language: en-PK`).
-  - **Action:** Add **Easypaisa**, **JazzCash**, **Raast**, and **Bank Transfer** badges in header and footer.
+- [x] **DAY 5: Local PKR Payment & Geo Signals** (COMPLETED ✅)
+  - **Action:** Verified local Pakistan geo-tags (`geo.region: PK`, `geo.placename: Pakistan`, `language: en-PK`) across core landing pages.
+  - **Action:** Injected **Easypaisa**, **JazzCash**, **Raast Pay**, and **Bank Transfer** local payment badges into global [`footer.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/footer.html).
 
 - [ ] **DAY 6: Schema Markup Injection (Structured Data)**
   - **Action:** Embed `Organization` Schema, `Service` Schema, and `FAQPage` JSON-LD schema into `index.html` & `domain-search.html`.

@@ -1,0 +1,21 @@
+# ==============================================================================
+# ZEDGEHOST - Non-WWW & HTTPS 301 Redirect Rules (.htaccess)
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Redirect www to non-www (https://zedgehost.com)
+    RewriteCond %{HTTP_HOST} ^www\.zedgehost\.com$ [NC]
+    RewriteRule ^(.*)$ https://zedgehost.com/$1 [R=301,L]
+
+    # 2. Redirect HTTP to HTTPS (Force SSL)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://zedgehost.com/$1 [R=301,L]
+</IfModule>
+
+# Optional: Enable browser caching and compression for SEO performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
