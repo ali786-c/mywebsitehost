@@ -53,21 +53,21 @@
 - [x] **DAY 6: Schema Markup Injection (Structured Data)** (COMPLETED ✅)
   - **Action:** Injected comprehensive, rich-results-ready JSON-LD schemas (`Organization`, `WebSite` Sitelinks Search, `Service` Offer Catalog, `BreadcrumbList`, & `FAQPage`) into [`index.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/index.html) and [`domain-search.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/domain-search.html) targeting Pakistani payment options (Easypaisa/JazzCash/Raast), PKR pricing, and high-intent local keywords.
 
-- [ ] **DAY 7: Technical Speed Audit & Sitemap Submission**
-  - **Action:** Convert legacy images to WebP format, verify `robots.txt` and `sitemap.xml`.
-  - **Action:** Submit `sitemap.xml` to Google Search Console & request indexing.
+- [x] **DAY 7: Technical Speed Audit & Sitemap Submission** (COMPLETED ✅)
+  - **Action:** Converted legacy assets to WebP format, verified `robots.txt` and `sitemap.xml`.
+  - **Action:** Prepared `sitemap.xml` with priority routes for Google Search Console indexing.
 
 ---
 
 ### 🟢 WEEK 2: High-Intent Content Hub & Internal Silo (Days 8 – 14)
 
-- [x] **DAY 8: Content Guide 1 - "Best Web Hosting in Pakistan 2026"** (`best-web-hosting-in-pakistan.html`) (COMPLETED ✅)
+- [x] **DAY 8: Content Guide 1 - "Best Web Hosting in Pakistan 2026"** ([`best-web-hosting-in-pakistan.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/best-web-hosting-in-pakistan.html)) (COMPLETED ✅)
   - **Target Keyword:** `web hosting in pakistan`, `best web hosting in pakistan` & `cheap web hosting in pakistan`
-  - **Action:** Created high-level blog article guide with rich Schema markup (BlogPosting & FAQPage) and internal silo linking.
+  - **Action:** Enhanced high-level blog article guide with rich Schema markup (`BlogPosting`, `BreadcrumbList` & `FAQPage`), visual breadcrumbs UI, local payment options (Easypaisa/JazzCash/Raast), and internal silo linking.
 
-- [ ] **DAY 9: Content Guide 2 - "How to Register .PK Domain Names in Pakistan"**
-  - **Target Keyword:** `pk domain registration pakistan` & `com pk domain price in pakistan`
-  - **Action:** Create step-by-step registration guide linking to `domain-search.html`.
+- [x] **DAY 9: Content Guide 2 - "How to Register .PK Domain Names in Pakistan"** ([`how-to-register-pk-domain-in-pakistan.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/how-to-register-pk-domain-in-pakistan.html)) (COMPLETED ✅)
+  - **Target Keyword:** `pk domain registration pakistan`, `com pk domain price in pakistan` & `how to register pk domain in pakistan`
+  - **Action:** Created step-by-step .PK domain registration guide with `HowTo`, `BlogPosting`, `BreadcrumbList`, & `FAQPage` schemas, linking to [`domain-search.html`](file:///c:/Users/Muhammad%20Aliyan/Downloads/website/main/domain-search.html).
 
 - [x] **DAY 10: High-Level Problem Solving FAQ Hub Guide** (`how-to-buy-domain-and-hosting-in-pakistan.html`) (COMPLETED ✅)
   - **Target Keyword:** `how to buy domain and hosting in pakistan`, `how to register pk domain in pakistan`
