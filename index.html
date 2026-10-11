@@ -14,8 +14,9 @@
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<!-- Place favicon.png in the root directory --> 
+<link rel="icon" type="image/png" href="Images_WebP/faviconblack.png">
+<link rel="shortcut icon" href="Images_WebP/faviconblack.png">
+<link rel="apple-touch-icon" href="Images_WebP/faviconblack.png">
 
 <!-- CSS here -->
 
@@ -363,26 +364,112 @@
           </div>
         </div>
       </div>
-      <div class="pricing-tab"> <span class="tab-btn monthly_tab_title">Monthly</span> <span class="pricing-tab-switcher"></span> <span class="tab-btn annual_tab_title">Yearly <strong>(save 30%)</strong></span> </div>
+      <!-- Pricing Custom Styling -->
+      <style>
+        .pricing__area .pricing__list {
+          height: auto !important;
+          overflow: visible !important;
+        }
+        .pricing__price .price {
+          font-size: 38px;
+          display: flex !important;
+          align-items: flex-end;
+          line-height: 1;
+          margin-bottom: 12px;
+        }
+        .pricing__price .price span {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 5px;
+          margin-left: 4px;
+          color: var(--tg-color-gray-4, #767982);
+        }
+        .pricing__dropdown-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 10px 14px;
+          margin-top: 20px;
+          background: #f4f6fa;
+          border: 1px solid #e2e5ec;
+          border-radius: 8px;
+          color: var(--tg-heading-color, #1a1a2e);
+          font-size: 13.5px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          user-select: none;
+        }
+        .pricing__dropdown-btn:hover {
+          background: #e9ecf5;
+          border-color: #d0d5e2;
+          color: var(--tg-theme-primary, #0d6efd);
+        }
+        .pricing__dropdown-btn .dropdown-chevron {
+          transition: transform 0.3s ease;
+          color: var(--tg-theme-primary, #0d6efd);
+          flex-shrink: 0;
+        }
+        .pricing__dropdown-btn.active .dropdown-chevron {
+          transform: rotate(180deg);
+        }
+        .pricing__dropdown-panel {
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease, padding-top 0.3s ease;
+          margin-top: 0;
+          padding-top: 0;
+        }
+        .pricing__dropdown-panel.open {
+          max-height: 900px;
+          opacity: 1;
+          margin-top: 16px;
+          padding-top: 16px;
+          border-top: 1px dashed rgba(0, 0, 0, 0.12);
+        }
+        .pricing__dropdown-panel .list-wrap li {
+          margin-bottom: 16px;
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          font-size: 13.5px;
+          line-height: 1.3;
+        }
+        .pricing__dropdown-panel .list-wrap li:last-child {
+          margin-bottom: 0;
+        }
+        .pricing__dropdown-panel .list-wrap li .icon {
+          color: var(--tg-theme-primary, #0d6efd);
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+      </style>
+
       <div class="pricing__item-wrap">
         <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6">
+          <!-- Plan 1: Rs 1,499/year -->
+          <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
             <div class="pricing__box">
               <div class="pricing__plan">
                 <h4 class="title">Starter Plan</h4>
-                <p>Everything you need to your wbsite</p>
+                <p>Essential NVMe hosting for single websites</p>
               </div>
               <div class="pricing__price">
-                <h2 class="price monthly_price"><span class="currency-display" data-pkr="Rs 1,260" data-usd="$4.50">Rs 1,260</span> <span>/month</span></h2>
-                <h2 class="price annual_price"><span class="currency-display" data-pkr="Rs 12,740" data-usd="$45.50">Rs 12,740</span> <span>/year</span></h2>
-                <p><span class="currency-display" data-pkr="Rs 1,675" data-usd="$5.99">Rs 1,675</span> when you renew this plan</p>
-                <span class="price-off">50% OFF</span> </div>
-              <div class="pricing__btn"> <a href="shared-hosting.html" class="tg-btn tg-border-btn">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Get Started </a> </div>
+                <h2 class="price"><span class="currency-display" data-pkr="Rs 1,499" data-usd="$5.39">Rs 1,499</span> <span>/year</span></h2>
+                <p><span class="currency-display" data-pkr="Rs 1,499" data-usd="$5.39">Rs 1,499</span> when you renew this plan</p>
+                <span class="price-off">50% OFF</span>
+              </div>
+              <div class="pricing__btn">
+                <a href="shared-hosting.html" class="tg-btn tg-border-btn">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  Get Started
+                </a>
+              </div>
               <div class="pricing__list">
                 <ul class="list-wrap">
                   <li>
@@ -391,7 +478,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to 10 Website</span> </div>
+                    <div class="content"><span><strong>1 Website</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -399,7 +486,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Stander Performance</span> </div>
+                    <div class="content"><span><strong>20 GB</strong> NVMe Storage</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -407,7 +494,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to <strong>30 GB</strong> Data Storage</span> </div>
+                    <div class="content"><span><strong>Unmetered</strong> Bandwidth</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -415,7 +502,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>25 GB</strong> SSD Storage</span> </div>
+                    <div class="content"><span><strong>5</strong> Email Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -423,7 +510,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>Free</strong> &amp; Automatic Website Migration</span> </div>
+                    <div class="content"><span><strong>10</strong> MySQL Databases</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -431,7 +518,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Daily Backup</span> </div>
+                    <div class="content"><span><strong>2</strong> FTP Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -439,7 +526,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>99.99</strong> Uptime Guarantee</span> </div>
+                    <div class="content"><span>Free <strong>SSL Certificate</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -447,7 +534,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Unlimited Free <strong>SSL</strong></span> </div>
+                    <div class="content"><span><strong>24/7</strong> Dedicated Support</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -455,7 +542,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>24/7 Dedicated <strong>Support</strong></span> </div>
+                    <div class="content"><span>AI <strong>Website Builder</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -463,7 +550,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Powerful control panel</span> </div>
+                    <div class="content"><span><strong>1-Click WordPress</strong> Install</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -471,46 +558,123 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Cache manager</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> cronjobs</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> FTP accounts</span> </div>
+                    <div class="content"><span>Multi-Language (Python, Node.js, PHP)</span></div>
                   </li>
                 </ul>
+
+                <!-- Dropdown Trigger Button -->
+                <div class="pricing__dropdown-btn" role="button" tabindex="0" aria-expanded="false">
+                  <span>
+                    <span class="more-text">More Features</span>
+                    <span class="less-text" style="display: none;">Less Features</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+
+                <!-- Dropdown Collapsible Content -->
+                <div class="pricing__dropdown-panel">
+                  <ul class="list-wrap">
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free <strong>cPanel</strong> Control Panel</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free Website <strong>Migration</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>99.9%</strong> Uptime Guarantee</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>LiteSpeed Web Server</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>phpMyAdmin</strong> Database Manager</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Automated <strong>Daily Backups</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>DDoS Protection &amp; Web Firewall</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Webmail Suite (Roundcube)</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Git Version Control &amp; Cronjobs</span></div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="pricing__select"> <span class="more-item">More Features</span> <span class="less-item">Less Features</span> </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+
+          <!-- Plan 2: Rs 2,999/year -->
+          <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
             <div class="pricing__box">
               <div class="pricing__plan">
-                <h4 class="title">Business Plan</h4>
-                <p>Everything you need to your wbsite</p>
+                <h4 class="title">Standard Plan</h4>
+                <p>Expanded resources for multiple websites</p>
               </div>
               <div class="pricing__price">
-                <h2 class="price monthly_price"><span class="currency-display" data-pkr="Rs 2,660" data-usd="$9.50">Rs 2,660</span> <span>/month</span></h2>
-                <h2 class="price annual_price"><span class="currency-display" data-pkr="Rs 25,340" data-usd="$90.50">Rs 25,340</span> <span>/year</span></h2>
-                <p><span class="currency-display" data-pkr="Rs 1,675" data-usd="$5.99">Rs 1,675</span> when you renew this plan</p>
-                <span class="price-off">70% OFF</span> </div>
-              <div class="pricing__btn"> <a href="shared-hosting.html" class="tg-btn tg-border-btn active">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Get Started </a> </div>
+                <h2 class="price"><span class="currency-display" data-pkr="Rs 2,999" data-usd="$10.79">Rs 2,999</span> <span>/year</span></h2>
+                <p><span class="currency-display" data-pkr="Rs 2,999" data-usd="$10.79">Rs 2,999</span> when you renew this plan</p>
+                <span class="price-off">60% OFF</span>
+              </div>
+              <div class="pricing__btn">
+                <a href="shared-hosting.html" class="tg-btn tg-border-btn">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  Get Started
+                </a>
+              </div>
               <div class="pricing__list">
                 <ul class="list-wrap">
                   <li>
@@ -519,7 +683,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to 10 Website</span> </div>
+                    <div class="content"><span><strong>5 Websites</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -527,7 +691,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Stander Performance</span> </div>
+                    <div class="content"><span><strong>50 GB</strong> NVMe Storage</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -535,7 +699,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to <strong>30 GB</strong> Data Storage</span> </div>
+                    <div class="content"><span><strong>Unmetered</strong> Bandwidth</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -543,7 +707,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>25 GB</strong> SSD Storage</span> </div>
+                    <div class="content"><span><strong>10</strong> Email Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -551,7 +715,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>Free</strong> &amp; Automatic Website Migration</span> </div>
+                    <div class="content"><span><strong>20</strong> MySQL Databases</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -559,7 +723,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Daily Backup</span> </div>
+                    <div class="content"><span><strong>2</strong> FTP Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -567,7 +731,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>99.99</strong> Uptime Guarantee</span> </div>
+                    <div class="content"><span>Free <strong>SSL Certificate</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -575,7 +739,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Unlimited Free <strong>SSL</strong></span> </div>
+                    <div class="content"><span><strong>24/7</strong> Dedicated Support</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -583,7 +747,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>24/7 Dedicated <strong>Support</strong></span> </div>
+                    <div class="content"><span>AI <strong>Website Builder</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -591,7 +755,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Powerful control panel</span> </div>
+                    <div class="content"><span><strong>1-Click WordPress</strong> Install</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -599,46 +763,123 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Cache manager</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> cronjobs</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> FTP accounts</span> </div>
+                    <div class="content"><span>Multi-Language (Python, Node.js, PHP)</span></div>
                   </li>
                 </ul>
+
+                <!-- Dropdown Trigger Button -->
+                <div class="pricing__dropdown-btn" role="button" tabindex="0" aria-expanded="false">
+                  <span>
+                    <span class="more-text">More Features</span>
+                    <span class="less-text" style="display: none;">Less Features</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+
+                <!-- Dropdown Collapsible Content -->
+                <div class="pricing__dropdown-panel">
+                  <ul class="list-wrap">
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free <strong>cPanel</strong> Control Panel</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free Website <strong>Migration</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>99.9%</strong> Uptime Guarantee</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>LiteSpeed Web Server</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>phpMyAdmin</strong> Database Manager</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Automated <strong>Daily Backups</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>DDoS Protection &amp; Web Firewall</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Webmail Suite (Roundcube)</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Git Version Control &amp; Cronjobs</span></div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="pricing__select"> <span class="more-item">More Features</span> <span class="less-item">Less Features</span> </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+
+          <!-- Plan 3: Rs 3,999/year (Popular) -->
+          <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
             <div class="pricing__box">
               <div class="pricing__plan">
-                <h4 class="title">Enterprise Plan</h4>
-                <p>Everything you need to your wbsite</p>
+                <h4 class="title">Business Plan <span class="tg-badge">Popular</span></h4>
+                <p>Best value for agencies, businesses &amp; stores</p>
               </div>
               <div class="pricing__price">
-                <h2 class="price monthly_price"><span class="currency-display" data-pkr="Rs 5,740" data-usd="$20.50">Rs 5,740</span> <span>/month</span></h2>
-                <h2 class="price annual_price"><span class="currency-display" data-pkr="Rs 56,140" data-usd="$200.50">Rs 56,140</span> <span>/year</span></h2>
-                <p><span class="currency-display" data-pkr="Rs 1,675" data-usd="$5.99">Rs 1,675</span> when you renew this plan</p>
-                <span class="price-off">50% OFF</span> </div>
-              <div class="pricing__btn"> <a href="shared-hosting.html" class="tg-btn tg-border-btn">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Get Started </a> </div>
+                <h2 class="price"><span class="currency-display" data-pkr="Rs 3,999" data-usd="$14.39">Rs 3,999</span> <span>/year</span></h2>
+                <p><span class="currency-display" data-pkr="Rs 3,999" data-usd="$14.39">Rs 3,999</span> when you renew this plan</p>
+                <span class="price-off">70% OFF</span>
+              </div>
+              <div class="pricing__btn">
+                <a href="shared-hosting.html" class="tg-btn tg-border-btn active">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  Get Started
+                </a>
+              </div>
               <div class="pricing__list">
                 <ul class="list-wrap">
                   <li>
@@ -647,7 +888,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to 10 Website</span> </div>
+                    <div class="content"><span><strong>20 Websites</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -655,7 +896,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Stander Performance</span> </div>
+                    <div class="content"><span><strong>100 GB</strong> NVMe Storage</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -663,7 +904,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Up to <strong>30 GB</strong> Data Storage</span> </div>
+                    <div class="content"><span><strong>Unmetered</strong> Bandwidth</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -671,7 +912,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>25 GB</strong> SSD Storage</span> </div>
+                    <div class="content"><span><strong>50</strong> Email Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -679,7 +920,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>Free</strong> &amp; Automatic Website Migration</span> </div>
+                    <div class="content"><span><strong>Unlimited</strong> MySQL Databases</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -687,7 +928,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Daily Backup</span> </div>
+                    <div class="content"><span><strong>Unlimited</strong> FTP Accounts</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -695,7 +936,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span><strong>99.99</strong> Uptime Guarantee</span> </div>
+                    <div class="content"><span>Free <strong>SSL Certificate</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -703,7 +944,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Unlimited Free <strong>SSL</strong></span> </div>
+                    <div class="content"><span><strong>24/7</strong> Dedicated Support</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -711,7 +952,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>24/7 Dedicated <strong>Support</strong></span> </div>
+                    <div class="content"><span>AI <strong>Website Builder</strong></span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -719,7 +960,7 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Powerful control panel</span> </div>
+                    <div class="content"><span><strong>1-Click WordPress</strong> Install</span></div>
                   </li>
                   <li>
                     <div class="icon">
@@ -727,31 +968,368 @@
                         <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
-                    <div class="content"> <span>Cache manager</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> cronjobs</span> </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="content"> <span><strong>Unlimited</strong> FTP accounts</span> </div>
+                    <div class="content"><span>Multi-Language (Python, Node.js, PHP)</span></div>
                   </li>
                 </ul>
+
+                <!-- Dropdown Trigger Button -->
+                <div class="pricing__dropdown-btn" role="button" tabindex="0" aria-expanded="false">
+                  <span>
+                    <span class="more-text">More Features</span>
+                    <span class="less-text" style="display: none;">Less Features</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+
+                <!-- Dropdown Collapsible Content -->
+                <div class="pricing__dropdown-panel">
+                  <ul class="list-wrap">
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free <strong>cPanel</strong> Control Panel</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free Website <strong>Migration</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>99.9%</strong> Uptime Guarantee</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>2X Faster</strong> LiteSpeed Turbo</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>CloudLinux Resource Isolation</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>phpMyAdmin</strong> Database Manager</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Automated <strong>Daily Backups</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Advanced DDoS &amp; Anti-Malware</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>SSH Terminal Access &amp; Git</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Unlimited Subdomains &amp; Cronjobs</span></div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="pricing__select"> <span class="more-item">More Features </span> <span class="less-item">Less Features</span> </div>
+            </div>
+          </div>
+
+          <!-- Plan 4: Rs 9,999/year (Ultimate) -->
+          <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
+            <div class="pricing__box" style="background: linear-gradient(45deg, #fff 70.19%, #fef3e2 100%);">
+              <div class="pricing__plan">
+                <h4 class="title">Enterprise Plan <span class="tg-badge" style="background:#def7ea;color:#0fb04b;">Ultimate</span></h4>
+                <p>Unmetered power &amp; max dedicated resources</p>
+              </div>
+              <div class="pricing__price">
+                <h2 class="price"><span class="currency-display" data-pkr="Rs 9,999" data-usd="$35.97">Rs 9,999</span> <span>/year</span></h2>
+                <p><span class="currency-display" data-pkr="Rs 9,999" data-usd="$35.97">Rs 9,999</span> when you renew this plan</p>
+                <span class="price-off">75% OFF</span>
+              </div>
+              <div class="pricing__btn">
+                <a href="shared-hosting.html" class="tg-btn tg-border-btn">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66797 7.5L12.168 10L9.66797 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 10C3 10.9849 3.19399 11.9602 3.5709 12.8701C3.94781 13.7801 4.50026 14.6069 5.1967 15.3033C5.89314 15.9997 6.71993 16.5522 7.62987 16.9291C8.53982 17.306 9.51509 17.5 10.5 17.5C11.4849 17.5 12.4602 17.306 13.3701 16.9291C14.2801 16.5522 15.1069 15.9997 15.8033 15.3033C16.4997 14.6069 17.0522 13.7801 17.4291 12.8701C17.806 11.9602 18 10.9849 18 10C18 8.01088 17.2098 6.10322 15.8033 4.6967C14.3968 3.29018 12.4891 2.5 10.5 2.5C8.51088 2.5 6.60322 3.29018 5.1967 4.6967C3.79018 6.10322 3 8.01088 3 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  Get Started
+                </a>
+              </div>
+              <div class="pricing__list">
+                <ul class="list-wrap">
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unlimited Websites</strong></span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unlimited</strong> NVMe Storage</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unmetered</strong> Bandwidth</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unlimited</strong> Email Accounts</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unlimited</strong> MySQL Databases</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>Unlimited</strong> FTP Accounts</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span>Free <strong>SSL Certificate</strong></span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>24/7 Priority</strong> VIP Support</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span>AI <strong>Website Builder</strong></span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span><strong>1-Click WordPress</strong> Install</span></div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="content"><span>Multi-Language (Python, Node.js, PHP)</span></div>
+                  </li>
+                </ul>
+
+                <!-- Dropdown Trigger Button -->
+                <div class="pricing__dropdown-btn" role="button" tabindex="0" aria-expanded="false">
+                  <span>
+                    <span class="more-text">More Features</span>
+                    <span class="less-text" style="display: none;">Less Features</span>
+                  </span>
+                  <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+
+                <!-- Dropdown Collapsible Content -->
+                <div class="pricing__dropdown-panel">
+                  <ul class="list-wrap">
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Free <strong>cPanel</strong> Control Panel</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>VIP White-Glove <strong>Migration</strong></span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>99.99%</strong> Uptime SLA</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>4X Faster</strong> LiteSpeed Turbo</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Max Dedicated CPU &amp; RAM</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>CloudLinux Account Isolation</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span><strong>phpMyAdmin</strong> Database Manager</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Daily Backups &amp; 1-Click Restore</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Enterprise DDoS &amp; Imunify360</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>SSH Terminal, Git &amp; WP-CLI</span></div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.16797 6.00016L5.33464 10.1668L13.668 1.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                      <div class="content"><span>Unlimited Subdomains &amp; Cronjobs</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Pricing Dropdown Interactive Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var dropdownBtns = document.querySelectorAll(".pricing__dropdown-btn");
+          dropdownBtns.forEach(function(btn) {
+            btn.addEventListener("click", function(e) {
+              e.preventDefault();
+              var panel = this.nextElementSibling;
+              if (!panel) return;
+              var isOpen = panel.classList.contains("open");
+              if (isOpen) {
+                panel.classList.remove("open");
+                this.classList.remove("active");
+                this.setAttribute("aria-expanded", "false");
+                var moreText = this.querySelector(".more-text");
+                var lessText = this.querySelector(".less-text");
+                if (moreText && lessText) {
+                  moreText.style.display = "inline";
+                  lessText.style.display = "none";
+                }
+              } else {
+                panel.classList.add("open");
+                this.classList.add("active");
+                this.setAttribute("aria-expanded", "true");
+                var moreText = this.querySelector(".more-text");
+                var lessText = this.querySelector(".less-text");
+                if (moreText && lessText) {
+                  moreText.style.display = "none";
+                  lessText.style.display = "inline";
+                }
+              }
+            });
+          });
+        });
+      </script>
     </div>
   </section>
     

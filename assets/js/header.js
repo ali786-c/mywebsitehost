@@ -111,7 +111,7 @@ const zedgeHeaderHTML = `
         <div class="col-12">
           <div class="tgmenu__wrap">
             <nav class="tgmenu__nav">
-              <div class="logo"> <a href="https://zedgehost.com/"><img src="assets/img/logo.svg" alt="Zedgehost Logo" width="150" height="40"></a> </div>
+              <div class="logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="auto" style="max-height: 42px; width: auto;"></a> </div>
               <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
                 <ul class="navigation">
                   <li><a href="index.html">Home</a></li>
@@ -281,10 +281,10 @@ const zedgeHeaderHTML = `
   </div>
   
   <!-- Mobile Menu  -->
-  <div class="tgmobile__menu">
+  <div class="tgmobile__menu" style="visibility: hidden; opacity: 0;">
     <nav class="tgmobile__menu-box">
       <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
-      <div class="nav-logo"> <a href="https://zedgehost.com/"><img src="assets/img/logo.svg" alt="Zedgehost Logo" width="150" height="40"></a> </div>
+      <div class="nav-logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="auto" style="max-height: 42px; width: auto;"></a> </div>
       <div class="tgmobile__menu-outer"> 
         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> 
       
@@ -448,7 +448,64 @@ if (!document.getElementById("zedge-header-css")) {
     document.head.appendChild(cssLink);
 }
 
+if (!document.getElementById("zedge-critical-header-css")) {
+    let criticalStyle = document.createElement("style");
+    criticalStyle.id = "zedge-critical-header-css";
+    criticalStyle.textContent = `
+        .tgmobile__menu {
+            position: fixed !important;
+            right: 0 !important;
+            top: 0 !important;
+            width: 300px !important;
+            max-width: 100% !important;
+            height: 100% !important;
+            z-index: 9999 !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            transform: translateX(101%) !important;
+            -webkit-transform: translateX(101%) !important;
+            transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 0.3s ease, visibility 0.3s ease !important;
+        }
+        body.mobile-menu-visible .tgmobile__menu {
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            transform: translateX(0%) !important;
+            -webkit-transform: translateX(0%) !important;
+        }
+        .tgmobile__menu-backdrop {
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+        body.mobile-menu-visible .tgmobile__menu-backdrop {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    `;
+    document.head.appendChild(criticalStyle);
+}
+
 injectZedgeHeaderHTML();
+
+document.addEventListener('click', function(e) {
+    var toggler = e.target.closest('.mobile-nav-toggler');
+    if (toggler) {
+        document.body.classList.add('mobile-menu-visible');
+    }
+    var closer = e.target.closest('.tgmobile__menu .close-btn, .tgmobile__menu-backdrop');
+    if (closer) {
+        document.body.classList.remove('mobile-menu-visible');
+    }
+    var dropdownBtn = e.target.closest('.tgmobile__menu li.menu-item-has-children .dropdown-btn');
+    if (dropdownBtn) {
+        dropdownBtn.classList.toggle('open');
+        var subMenu = dropdownBtn.previousElementSibling;
+        if (subMenu) {
+            subMenu.style.display = (subMenu.style.display === 'block') ? 'none' : 'block';
+        }
+    }
+});
 window.setCurrency = function(curr) {
     localStorage.setItem('selectedCurrency', curr);
     const event = new Event('currencyChanged');

@@ -3041,3 +3041,35 @@ input{
 .hero-banner {
     padding-top: 150px !important;
 }
+
+/* --- Prevent Mobile Menu Page-Load Flash --- */
+.tgmobile__menu {
+    position: fixed !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 300px !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    z-index: 9999 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateX(101%) !important;
+    -webkit-transform: translateX(101%) !important;
+    transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 0.3s ease, visibility 0.3s ease !important;
+}
+body.mobile-menu-visible .tgmobile__menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateX(0%) !important;
+    -webkit-transform: translateX(0%) !important;
+}
+.tgmobile__menu-backdrop {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+body.mobile-menu-visible .tgmobile__menu-backdrop {
+    visibility: visible !important;
+    opacity: 1 !important;
+}

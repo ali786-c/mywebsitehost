@@ -231,6 +231,9 @@
   color: var(--tg-color-gray-4);
 }
 .tgmobile__menu {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
@@ -238,9 +241,9 @@
   padding-right: 30px;
   max-width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 9999;
   border-radius: 0px;
-  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 0.3s ease, visibility 0.3s ease;
   -moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -ms-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) e;
@@ -508,6 +511,9 @@
   overflow: hidden;
 }
 .mobile-menu-visible .tgmobile__menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
   -ms-transform: translateX(0%);
