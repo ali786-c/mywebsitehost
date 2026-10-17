@@ -24,6 +24,44 @@
   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .cloud-plan-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 48px);
+        margin: 0 24px 20px;
+        padding: 11px 14px;
+        border: 1px solid #e2e6ef;
+        border-radius: 8px;
+        background: #f5f7fb;
+        color: #252b3b;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background .2s ease, border-color .2s ease, color .2s ease;
+      }
+      .cloud-plan-toggle:hover,
+      .cloud-plan-toggle[aria-expanded="true"] {
+        background: #e9ecf5;
+        border-color: #d0d5e2;
+        color: var(--tg-theme-primary, #0d6efd);
+      }
+      .cloud-plan-toggle i { transition: transform .3s ease; }
+      .cloud-plan-toggle[aria-expanded="true"] i { transform: rotate(180deg); }
+      .cloud-plan-panel {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height .4s ease, opacity .3s ease;
+      }
+      .cloud-plan-panel.open { max-height: 900px; opacity: 1; }
+      .cloud-plan-panel ul { padding: 0 24px 24px !important; }
+      @media (prefers-reduced-motion: reduce) {
+        .cloud-plan-toggle, .cloud-plan-toggle i, .cloud-plan-panel { transition: none; }
+      }
+    </style>
     <link rel="canonical" href="https://zedgehost.com/cloud-hosting.html">
     <meta name="description" content="Scalable cloud hosting in Pakistan with fast performance, secure infrastructure, and flexible resources for growing businesses and busy websites.">
     <meta name="keywords" content="cloud hosting Pakistan, scalable hosting Pakistan, managed cloud hosting Pakistan, business cloud hosting Pakistan, secure hosting Pakistan">
@@ -99,7 +137,7 @@
         </div>
       </div>
       <div class="col-lg-6 text-lg-end text-center">
-        <img src="Images_WebP/cloudhostingherotranparent.png" alt="Cloud Hosting in Pakistan" class="img-fluid" style="position: relative; max-width: 520px; width: 100%; height: auto;">
+        <img src="Images_WebP/cloudhostingherotranparent.webp" alt="Cloud Hosting in Pakistan" class="img-fluid" style="position: relative; max-width: 520px; width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -129,15 +167,26 @@
             <li><i class="bi bi-globe-americas me-2"></i><strong>10 Websites</strong></li>
             <li><i class="bi bi-device-ssd-fill me-2"></i><strong>50 GB NVMe Storage</strong></li>
             <li><i class="bi bi-cpu-fill me-2"></i>2 Core Cloud vCPU</li>
-            <li><i class="bi bi-memory me-2"></i>4 GB Dedicated RAM</li>
+            <li><i class="bi bi-memory me-2"></i>2 GB RAM</li>
+            <li><i class="bi bi-globe me-2"></i>Free .com Domain (1st Year)</li>
             <li><i class="bi bi-speedometer2 me-2"></i>Unmetered Cloud Bandwidth</li>
             <li><i class="bi bi-lock-fill me-2"></i>Free Unlimited SSL Certificates</li>
-            <li><i class="bi bi-arrow-repeat me-2"></i>Free Automatic Website Migration</li>
-            <li><i class="bi bi-cloud-check-fill me-2"></i>Daily Automated Cloud Backups</li>
-            <li><i class="bi bi-shield-check me-2"></i>99.99% Uptime SLA Guarantee</li>
-            <li><i class="bi bi-lightning-charge-fill me-2"></i>LiteSpeed &amp; NGINX Web Cache</li>
-            <li><i class="bi bi-headset me-2"></i>24/7 Dedicated Support (PKR)</li>
           </ul>
+          <button class="cloud-plan-toggle" type="button" aria-expanded="false" aria-controls="cloud-starter-features"><span class="cloud-plan-toggle-label">More Features</span><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <div class="cloud-plan-panel" id="cloud-starter-features">
+            <ul class="plan_features">
+              <li><i class="bi bi-window-sidebar me-2"></i>Free cPanel Control Panel</li>
+              <li><i class="bi bi-database me-2"></i>phpMyAdmin Database Manager</li>
+              <li><i class="bi bi-envelope me-2"></i>cPanel Webmail</li>
+              <li><i class="bi bi-folder me-2"></i>FTP Accounts &amp; File Manager</li>
+              <li><i class="bi bi-clock-history me-2"></i>Cron Jobs &amp; Git Version Control</li>
+              <li><i class="bi bi-arrow-repeat me-2"></i>Free Automatic Website Migration</li>
+              <li><i class="bi bi-cloud-check-fill me-2"></i>Daily Automated Cloud Backups</li>
+              <li><i class="bi bi-shield-check me-2"></i>99.99% Uptime SLA Guarantee</li>
+              <li><i class="bi bi-lightning-charge-fill me-2"></i>LiteSpeed &amp; NGINX Web Cache</li>
+              <li><i class="bi bi-headset me-2"></i>24/7 Dedicated Support</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
@@ -156,16 +205,26 @@
               <li><i class="bi bi-globe-americas me-2"></i><strong>50 Websites</strong></li>
               <li><i class="bi bi-device-ssd-fill me-2"></i><strong>100 GB NVMe Storage</strong></li>
               <li><i class="bi bi-cpu-fill me-2"></i>4 Core Cloud vCPU</li>
-              <li><i class="bi bi-memory me-2"></i>8 GB Dedicated RAM</li>
+              <li><i class="bi bi-memory me-2"></i>2 GB RAM</li>
+              <li><i class="bi bi-globe me-2"></i>Free .com Domain (1st Year)</li>
               <li><i class="bi bi-speedometer2 me-2"></i>Unmetered Cloud Bandwidth</li>
-              <li><i class="bi bi-globe me-2"></i>Free Domain (.com/.pk - 1st Year)</li>
               <li><i class="bi bi-lock-fill me-2"></i>Free Unlimited SSL Certificates</li>
-              <li><i class="bi bi-arrow-repeat me-2"></i>Free Priority Website Migration</li>
-              <li><i class="bi bi-cloud-check-fill me-2"></i>Automated Daily &amp; On-Demand Backups</li>
-              <li><i class="bi bi-shield-check me-2"></i>Advanced DDoS &amp; Malware Shield</li>
-              <li><i class="bi bi-lightning-charge-fill me-2"></i>LiteSpeed Enterprise Caching</li>
-              <li><i class="bi bi-headset me-2"></i>24/7 Priority VIP Support</li>
             </ul>
+            <button class="cloud-plan-toggle" type="button" aria-expanded="false" aria-controls="cloud-business-features"><span class="cloud-plan-toggle-label">More Features</span><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="cloud-plan-panel" id="cloud-business-features">
+              <ul class="plan_features">
+                <li><i class="bi bi-window-sidebar me-2"></i>Free cPanel Control Panel</li>
+                <li><i class="bi bi-database me-2"></i>phpMyAdmin Database Manager</li>
+                <li><i class="bi bi-envelope me-2"></i>cPanel Webmail</li>
+                <li><i class="bi bi-folder me-2"></i>FTP Accounts &amp; File Manager</li>
+                <li><i class="bi bi-clock-history me-2"></i>Cron Jobs &amp; Git Version Control</li>
+                <li><i class="bi bi-arrow-repeat me-2"></i>Free Priority Website Migration</li>
+                <li><i class="bi bi-cloud-check-fill me-2"></i>Automated Daily &amp; On-Demand Backups</li>
+                <li><i class="bi bi-shield-check me-2"></i>Advanced DDoS &amp; Malware Shield</li>
+                <li><i class="bi bi-lightning-charge-fill me-2"></i>LiteSpeed Enterprise Caching</li>
+                <li><i class="bi bi-headset me-2"></i>24/7 Priority VIP Support</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -183,16 +242,26 @@
             <li><i class="bi bi-globe-americas me-2"></i><strong>Unlimited Websites</strong></li>
             <li><i class="bi bi-device-ssd-fill me-2"></i><strong>200 GB NVMe Storage</strong></li>
             <li><i class="bi bi-cpu-fill me-2"></i>6 Core Cloud vCPU</li>
-            <li><i class="bi bi-memory me-2"></i>16 GB Dedicated RAM</li>
+            <li><i class="bi bi-memory me-2"></i>2 GB RAM</li>
+            <li><i class="bi bi-globe me-2"></i>Free .com Domain (1st Year)</li>
             <li><i class="bi bi-speedometer2 me-2"></i>Ultra-Fast Dedicated Bandwidth</li>
-            <li><i class="bi bi-globe me-2"></i>Free Premium Domain Included</li>
             <li><i class="bi bi-lock-fill me-2"></i>Free Wildcard SSL Certificates</li>
-            <li><i class="bi bi-hdd-network-fill me-2"></i>Free Dedicated IP Address</li>
-            <li><i class="bi bi-cloud-check-fill me-2"></i>Real-Time Automated Daily Backups</li>
-            <li><i class="bi bi-shield-lock-fill me-2"></i>Isolated Virtual Cloud Container</li>
-            <li><i class="bi bi-lightning-charge-fill me-2"></i>Maximum Turbo Cloud Performance</li>
-            <li><i class="bi bi-headset me-2"></i>24/7 Dedicated Account Manager</li>
           </ul>
+          <button class="cloud-plan-toggle" type="button" aria-expanded="false" aria-controls="cloud-enterprise-features"><span class="cloud-plan-toggle-label">More Features</span><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          <div class="cloud-plan-panel" id="cloud-enterprise-features">
+            <ul class="plan_features">
+              <li><i class="bi bi-window-sidebar me-2"></i>Free cPanel Control Panel</li>
+              <li><i class="bi bi-database me-2"></i>phpMyAdmin Database Manager</li>
+              <li><i class="bi bi-envelope me-2"></i>cPanel Webmail</li>
+              <li><i class="bi bi-folder me-2"></i>FTP Accounts &amp; File Manager</li>
+              <li><i class="bi bi-clock-history me-2"></i>Cron Jobs &amp; Git Version Control</li>
+              <li><i class="bi bi-hdd-network-fill me-2"></i>Free Dedicated IP Address</li>
+              <li><i class="bi bi-cloud-check-fill me-2"></i>Real-Time Automated Daily Backups</li>
+              <li><i class="bi bi-shield-lock-fill me-2"></i>Isolated Virtual Cloud Container</li>
+              <li><i class="bi bi-lightning-charge-fill me-2"></i>Maximum Turbo Cloud Performance</li>
+              <li><i class="bi bi-headset me-2"></i>24/7 Dedicated Account Manager</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -216,7 +285,7 @@
         </div>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="Images_WebP/Scalable Cloud Infrastructure.png" alt="Scalable Cloud Infrastructure for Modern Websites" class="img-fluid" style="max-width: 480px; width: 100%; height: auto;">
+        <img src="Images_WebP/Scalable Cloud Infrastructure.webp" alt="Scalable Cloud Infrastructure for Modern Websites" class="img-fluid" style="max-width: 480px; width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -307,7 +376,7 @@
         </div>
       </div>
       <div class="col-lg-6 text-center">
-        <img src="Images_WebP/sslhosting.png" alt="Advanced Security for Your Website" class="img-fluid" style="max-width: 380px; width: 100%; height: auto;">
+        <img src="Images_WebP/sslhosting.webp" alt="Advanced Security for Your Website" class="img-fluid" style="max-width: 380px; width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -486,6 +555,17 @@
 
 
 <script defer src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll(".cloud-plan-toggle").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var panel = document.getElementById(button.getAttribute("aria-controls"));
+      if (!panel) return;
+      var isOpen = panel.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.querySelector(".cloud-plan-toggle-label").textContent = isOpen ? "Less Features" : "More Features";
+    });
+  });
+</script>
 
 
 
