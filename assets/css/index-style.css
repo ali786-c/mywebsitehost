@@ -4559,7 +4559,8 @@ ul.top-menu li:hover > a, ul.top-menu li.active > a {
 }
 
 .hosting-active {
-  margin-right: -380px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 /*=============================

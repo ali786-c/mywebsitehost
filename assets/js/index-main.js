@@ -151,27 +151,30 @@ var brandSwiper = new Swiper('.brand-active', {
 =============================================*/
 var brandSwiper = new Swiper('.hosting-active', {
     // Optional parameters
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 24,
     loop: true,
+    grabCursor: true,
+    simulateTouch: true,
+    allowTouchMove: true,
     breakpoints: {
         '1500': {
-            slidesPerView: 5,
-        },
-        '1200': {
-            slidesPerView: 5,
-        },
-        '992': {
             slidesPerView: 4,
         },
-        '768': {
+        '1200': {
+            slidesPerView: 4,
+        },
+        '992': {
             slidesPerView: 3,
+        },
+        '768': {
+            slidesPerView: 2,
         },
         '576': {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
         '0': {
-            slidesPerView: 2,
+            slidesPerView: 1.1,
         },
     },
     navigation: {
