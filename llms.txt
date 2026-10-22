@@ -38,7 +38,7 @@ Our content is designed to help Pakistani customers compare hosting plans, choos
 ## About and support
 
 - [About Zedgehost Pakistan](https://zedgehost.com/about-us.html): Background, mission, and service approach.
-- [Contact Zedgehost Pakistan](https://zedgehost.com/contact-us.html): Support, sales, and migration assistance.
+- [Contact Zedgehost Pakistan](https://my.zedgehost.com/contact.php): Support, sales, and migration assistance.
 - [Legal & Privacy Information](https://zedgehost.com/legal.html): Service terms, policy details, and legal information.
 
 ## Trust and service standards

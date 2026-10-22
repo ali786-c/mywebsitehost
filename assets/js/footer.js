@@ -21,6 +21,7 @@ const zedgeFooterHTML = `
               <div class="footer__logo mb-15"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="auto" style="max-height: 42px; width: auto;"></a> </div>
               <div class="footer__content footer__content-two">
                 <p>Zedgehost provides reliable, ultra-fast, and secure web hosting, VPS, and domain registration services to empower your online journey.</p>
+                <p class="footer__contact-phone">Call us: <a href="tel:+923054380315">+92 305 4380315</a></p>
               </div>
               <div class="footer__social footer__social-two"> <span class="title">Get Connected</span>
                 <ul class="list-wrap">
@@ -84,9 +85,9 @@ const zedgeFooterHTML = `
               <div class="footer__link">
                 <ul class="list-wrap">
                   <li><a href="about-us.html">About us</a></li>
-                  <li><a href="contact-us.html">Contact us</a></li>
+                  <li><a href="https://my.zedgehost.com/contact.php">Contact us</a></li>
                   <li><a href="index.html">Knowledge Base</a></li>
-                  <li><a href="contact-us.html">Support</a></li>
+                  <li><a href="https://my.zedgehost.com/contact.php">Support</a></li>
                   <li><a href="index.html">Datacenter Details</a></li>
                   <li><a href="index.html">Hosting Security</a></li>
                   <li><a href="index.html">Backup and Recovery</a></li>
