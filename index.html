@@ -59,7 +59,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="domain__search-wrap">
-            <form action="index.html" class="domain__search-form">
+            <form action="https://my.zedgehost.com/cart.php" method="get" class="domain__search-form" id="homepage-domain-search">
+              <input type="hidden" name="a" value="add">
+              <input type="hidden" name="domain" value="register">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_4017_10)">
                   <path d="M6 15.3333C6 16.559 6.24141 17.7727 6.71046 18.905C7.1795 20.0374 7.86699 21.0663 8.73367 21.933C9.60035 22.7997 10.6292 23.4872 11.7616 23.9562C12.894 24.4253 14.1077 24.6667 15.3333 24.6667C16.559 24.6667 17.7727 24.4253 18.905 23.9562C20.0374 23.4872 21.0663 22.7997 21.933 21.933C22.7997 21.0663 23.4872 20.0374 23.9562 18.905C24.4253 17.7727 24.6667 16.559 24.6667 15.3333C24.6667 14.1077 24.4253 12.894 23.9562 11.7616C23.4872 10.6292 22.7997 9.60035 21.933 8.73367C21.0663 7.86699 20.0374 7.1795 18.905 6.71046C17.7727 6.24141 16.559 6 15.3333 6C14.1077 6 12.894 6.24141 11.7616 6.71046C10.6292 7.1795 9.60035 7.86699 8.73367 8.73367C7.86699 9.60035 7.1795 10.6292 6.71046 11.7616C6.24141 12.894 6 14.1077 6 15.3333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -71,12 +73,13 @@
                   </clipPath>
                 </defs>
               </svg>
-              <input type="text" placeholder="Type the domain you want to buy">
+              <input type="text" id="homepage-domain-name" placeholder="Type the domain you want to buy" aria-label="Domain name" required>
               <div class="domain__search-action">
-                <select class="select" style="display: none;">
-                  <option>.com</option>
-                  <option>.net</option>
-                  <option>.org</option>
+                <select class="select" id="homepage-domain-extension" aria-label="Domain extension" style="display: none;">
+                  <option value=".com">.com</option>
+                  <option value=".net">.net</option>
+                  <option value=".org">.org</option>
+                  <option value=".pk">.pk</option>
                   <option>.online</option>
                   <option>.ai</option>
                   <option>.business</option>
@@ -130,6 +133,29 @@
   </section>
     
   <!-- banner-area-end --> 
+
+  <section class="section-py-80" aria-labelledby="domain-pricing-title">
+    <div class="container">
+      <div class="section__title text-center mb-40">
+        <h2 class="title" id="domain-pricing-title">Domain Registration Prices</h2>
+        <p>Clear registration, transfer, and renewal prices in Pakistani Rupees.</p>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center">
+          <thead>
+            <tr><th scope="col">Domain</th><th scope="col">New Registration</th><th scope="col">Transfer</th><th scope="col">Renewal</th><th scope="col">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">.pk</th><td>Rs 4,999</td><td><a href="contact-us.html">Contact us</a></td><td><a href="contact-us.html">Contact us</a></td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
+            <tr><th scope="row">.com</th><td>Rs 3,921</td><td>Rs 3,921</td><td>Rs 3,921</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
+            <tr><th scope="row">.net</th><td>Rs 4,512</td><td>Rs 4,512</td><td>Rs 4,512</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
+            <tr><th scope="row">.org</th><td>Rs 2,879</td><td>Rs 4,195</td><td>Rs 4,195</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center mb-0">To register a domain, enter the complete name in the search above. Transfer and renewal prices are shown for reference.</p>
+    </div>
+  </section>
   
   <!-- hosting-area -->
     
@@ -1880,6 +1906,36 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Initial run
     updateCurrencyDisplay();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("homepage-domain-search");
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const input = document.getElementById("homepage-domain-name");
+    const extension = document.getElementById("homepage-domain-extension").value;
+    let domainName = input.value.trim().toLowerCase().replace(/\.$/, "");
+
+    if (!domainName.includes(".")) domainName += extension;
+
+    const validDomain = /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
+    if (!validDomain.test(domainName)) {
+      input.setCustomValidity("Enter a valid domain name, such as example.com.");
+      input.reportValidity();
+      return;
+    }
+
+    input.setCustomValidity("");
+    const cartUrl = new URL("https://my.zedgehost.com/cart.php");
+    cartUrl.searchParams.set("a", "add");
+    cartUrl.searchParams.set("domain", "register");
+    cartUrl.searchParams.set("query", domainName);
+    window.location.assign(cartUrl.toString());
+  });
 });
 </script>
 
