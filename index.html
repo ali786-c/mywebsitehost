@@ -73,20 +73,8 @@
                   </clipPath>
                 </defs>
               </svg>
-              <input type="text" id="homepage-domain-name" placeholder="Type the domain you want to buy" aria-label="Domain name" required>
+              <input type="text" id="homepage-domain-name" placeholder="Enter a complete domain, e.g. example.com" aria-label="Domain name" required>
               <div class="domain__search-action">
-                <select class="select" id="homepage-domain-extension" aria-label="Domain extension" style="display: none;">
-                  <option value=".com">.com</option>
-                  <option value=".net">.net</option>
-                  <option value=".org">.org</option>
-                  <option value=".pk">.pk</option>
-                  <option>.online</option>
-                  <option>.ai</option>
-                  <option>.business</option>
-                  <option>.edu</option>
-                  <option>.asia</option>
-                  <option>.app</option>
-                </select><div class="nice-select select" tabindex="0"><span class="current">.com</span><ul class="list"><li data-value=".com" class="option selected">.com</li><li data-value=".net" class="option">.net</li><li data-value=".org" class="option">.org</li><li data-value=".online" class="option">.online</li><li data-value=".ai" class="option">.ai</li><li data-value=".business" class="option">.business</li><li data-value=".edu" class="option">.edu</li><li data-value=".asia" class="option">.asia</li><li data-value=".app" class="option">.app</li></ul></div>
                 <button type="submit" class="tg-btn tg-black-btn">Search Domain</button>
               </div>
             </form>
@@ -134,28 +122,6 @@
     
   <!-- banner-area-end --> 
 
-  <section class="section-py-80" aria-labelledby="domain-pricing-title">
-    <div class="container">
-      <div class="section__title text-center mb-40">
-        <h2 class="title" id="domain-pricing-title">Domain Registration Prices</h2>
-        <p>Clear registration, transfer, and renewal prices in Pakistani Rupees.</p>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-bordered align-middle text-center">
-          <thead>
-            <tr><th scope="col">Domain</th><th scope="col">New Registration</th><th scope="col">Transfer</th><th scope="col">Renewal</th><th scope="col">Action</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">.pk</th><td>Rs 4,999</td><td><a href="contact-us.html">Contact us</a></td><td><a href="contact-us.html">Contact us</a></td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
-            <tr><th scope="row">.com</th><td>Rs 3,921</td><td>Rs 3,921</td><td>Rs 3,921</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
-            <tr><th scope="row">.net</th><td>Rs 4,512</td><td>Rs 4,512</td><td>Rs 4,512</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
-            <tr><th scope="row">.org</th><td>Rs 2,879</td><td>Rs 4,195</td><td>Rs 4,195</td><td><a class="tg-btn tg-black-btn" href="https://my.zedgehost.com/cart.php?a=add&amp;domain=register#domainsearchwrapper">Register</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-center mb-0">To register a domain, enter the complete name in the search above. Transfer and renewal prices are shown for reference.</p>
-    </div>
-  </section>
   
   <!-- hosting-area -->
     
@@ -1917,10 +1883,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     const input = document.getElementById("homepage-domain-name");
-    const extension = document.getElementById("homepage-domain-extension").value;
-    let domainName = input.value.trim().toLowerCase().replace(/\.$/, "");
-
-    if (!domainName.includes(".")) domainName += extension;
+    const domainName = input.value.trim().toLowerCase().replace(/\.$/, "");
 
     const validDomain = /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
     if (!validDomain.test(domainName)) {

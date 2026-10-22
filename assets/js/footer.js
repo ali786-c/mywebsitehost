@@ -72,7 +72,7 @@ const zedgeFooterHTML = `
                   <li><a href="domain-search.html">Search Domain</a></li>
                   <li><a href="enterprise-email.html">Enterprise Email</a></li>
                   <li><a href="bussiness-email.html">Business Email</a></li>
-                  <li><a href="domain-transfer.html">Domain Transfer</a></li>
+                  <li><a href="https://my.zedgehost.com/cart.php?a=add&amp;domain=transfer">Domain Transfer</a></li>
                   <li><a href="digicert-certificate.html">SSL Certificate</a></li>
                   <li><a href="gaps.html">Google Apps</a></li>
                 </ul>
