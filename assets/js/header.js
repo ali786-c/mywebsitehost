@@ -92,9 +92,9 @@ const zedgeHeaderHTML = `
                 </button>
                 <div class="dropdown-menu">
                   <ul class="top-menu">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="sign-up.html">Register</a></li>
-                    <li><a href="forgot-password.html">Forgot Password?</a></li>
+                    <li><a href="https://my.zedgehost.com/clientarea.php">Login</a></li>
+                    <li><a href="https://my.zedgehost.com/register.php">Register</a></li>
+                    <li><a href="https://my.zedgehost.com/index.php?rp=/password/reset">Forgot Password?</a></li>
                   </ul>
                 </div>
               </li>
