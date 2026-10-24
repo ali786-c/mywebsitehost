@@ -14,48 +14,7 @@ const zedgeHeaderHTML = `
         <div class="col-12 col-lg-6">
           <div class="d-flex justify-content-center justify-content-lg-end">
             <ul class="top-header">
-              <li class="header-dropdown-wrap dropdown notifications">
-                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Notifications
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_464_4901)">
-                    <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_464_4901">
-                      <rect width="16" height="16" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-                </button>
-                <div class="dropdown-menu">
-                  <ul class="top-menu">
-                    <li><a href="index.html"> You have 33 domain(s) expiring within the next 7 days. </a></li>
-                    <li><a href="index.html"> You have 69 unpaid invoice(s). Pay them early for peace of mind. </a></li>
-                    <li><a href="index.html"> You have 69 overdue invoice(s) with a total balance due of \$12,515 USD. Pay them now to avoid any interruptions in service. </a></li>
-                  </ul>
-                </div>
-              </li>
               <li class="header-dropdown-wrap dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="currency-btn-text">PKR</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_464_4901)">
-                    <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_464_4901">
-                      <rect width="16" height="16" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-                </button>
-                <div class="dropdown-menu">
-                  <ul class="top-menu">
-                    <li><a href="javascript:void(0)" onclick="setCurrency('PKR')">PKR</a></li>
-                    <li><a href="javascript:void(0)" onclick="setCurrency('USD')">USD</a></li>
-                  </ul>
-                </div>
-              </li>
-<li class="header-dropdown-wrap dropdown">
                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Language
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_464_4901)">
@@ -92,7 +51,7 @@ const zedgeHeaderHTML = `
                 </button>
                 <div class="dropdown-menu">
                   <ul class="top-menu">
-                    <li><a href="https://my.zedgehost.com/clientarea.php">Login</a></li>
+                    <li><a href="https://my.zedgehost.com/index.php?rp=/login">Login</a></li>
                     <li><a href="https://my.zedgehost.com/register.php">Register</a></li>
                     <li><a href="https://my.zedgehost.com/index.php?rp=/password/reset">Forgot Password?</a></li>
                   </ul>
@@ -506,30 +465,3 @@ document.addEventListener('click', function(e) {
         }
     }
 });
-window.setCurrency = function(curr) {
-    localStorage.setItem('selectedCurrency', curr);
-    const event = new Event('currencyChanged');
-    window.dispatchEvent(event);
-};
-
-function updateCurrencyDisplay() {
-    const currency = localStorage.getItem('selectedCurrency') || 'PKR';
-    const elements = document.querySelectorAll('.currency-display');
-    elements.forEach(el => {
-        if (currency === 'USD') {
-            el.textContent = el.getAttribute('data-usd');
-        } else {
-            el.textContent = el.getAttribute('data-pkr');
-        }
-    });
-    
-    const currencyBtn = document.getElementById('currency-btn-text');
-    if (currencyBtn) {
-        currencyBtn.textContent = currency;
-    }
-}
-
-window.addEventListener('currencyChanged', updateCurrencyDisplay);
-document.addEventListener("DOMContentLoaded", updateCurrencyDisplay);
-// Run immediately as well in case DOM is already parsed or to apply fast
-updateCurrencyDisplay();
