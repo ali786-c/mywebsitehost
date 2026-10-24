@@ -15,7 +15,7 @@ const zedgeHeaderHTML = `
           <div class="d-flex justify-content-center justify-content-lg-end">
             <ul class="top-header">
               <li class="header-dropdown-wrap dropdown">
-                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Language
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span id="currency-btn-text">PKR</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_464_4901)">
                     <path d="M4 7L8 11L12 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -29,14 +29,12 @@ const zedgeHeaderHTML = `
                 </button>
                 <div class="dropdown-menu">
                   <ul class="top-menu">
-                    <li><a href="index.html">Ã˜Â§Ã™â€žÃ˜Â¹Ã˜Â±Ã˜Â¨Ã™Å Ã˜Â©</a></li>
-                    <li><a href="index.html">Azerbaijani</a></li>
-                    <li><a href="index.html">CatalÃƒÂ </a></li>
-                    <li><a href="index.html">FranÃƒÂ§ais</a></li>
+                    <li><a href="javascript:void(0)" onclick="setCurrency('PKR')">PKR</a></li>
+                    <li><a href="javascript:void(0)" onclick="setCurrency('USD')">USD</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="header-dropdown-wrap dropdown">
+<li class="header-dropdown-wrap dropdown">
                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Account
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_464_4901)">
@@ -465,3 +463,30 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+window.setCurrency = function(curr) {
+    localStorage.setItem('selectedCurrency', curr);
+    const event = new Event('currencyChanged');
+    window.dispatchEvent(event);
+};
+
+function updateCurrencyDisplay() {
+    const currency = localStorage.getItem('selectedCurrency') || 'PKR';
+    const elements = document.querySelectorAll('.currency-display');
+    elements.forEach(el => {
+        if (currency === 'USD') {
+            el.textContent = el.getAttribute('data-usd');
+        } else {
+            el.textContent = el.getAttribute('data-pkr');
+        }
+    });
+    
+    const currencyBtn = document.getElementById('currency-btn-text');
+    if (currencyBtn) {
+        currencyBtn.textContent = currency;
+    }
+}
+
+window.addEventListener('currencyChanged', updateCurrencyDisplay);
+document.addEventListener("DOMContentLoaded", updateCurrencyDisplay);
+// Run immediately as well in case DOM is already parsed or to apply fast
+updateCurrencyDisplay();
