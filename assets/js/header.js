@@ -209,7 +209,7 @@ const zedgeHeaderHTML = `
                         </a> </div>
                     </div>
                   </li>
-                  <li class="header-btn"> <a href="index.html" class="tg-btn">
+                  <li class="header-btn"> <a href="https://my.zedgehost.com/index.php?rp=/login" class="tg-btn">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_464_4905)">
                         <path d="M6 5.33333V4C6 3.64638 6.14048 3.30724 6.39052 3.05719C6.64057 2.80714 6.97971 2.66667 7.33333 2.66667H12C12.3536 2.66667 12.6928 2.80714 12.9428 3.05719C13.1929 3.30724 13.3333 3.64638 13.3333 4V12C13.3333 12.3536 13.1929 12.6928 12.9428 12.9428C12.6928 13.1929 12.3536 13.3333 12 13.3333H7.33333C6.97971 13.3333 6.64057 13.1929 6.39052 12.9428C6.14048 12.6928 6 12.3536 6 12V10.6667" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
