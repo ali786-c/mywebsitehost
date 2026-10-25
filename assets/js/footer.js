@@ -82,11 +82,10 @@ const zedgeFooterHTML = `
                 <ul class="list-wrap">
                   <li><a href="about-us.html">About us</a></li>
                   <li><a href="https://my.zedgehost.com/contact.php">Contact us</a></li>
-                  <li><a href="index.html">Knowledge Base</a></li>
+                  <li><a href="https://my.zedgehost.com/knowledgebase/">Knowledge Base</a></li>
                   <li><a href="https://my.zedgehost.com/contact.php">Support</a></li>
-                  <li><a href="index.html">Datacenter Details</a></li>
-                  <li><a href="index.html">Hosting Security</a></li>
-                  <li><a href="index.html">Backup and Recovery</a></li>
+                  <li><a href="siteLock.html">Hosting Security</a></li>
+                  <li><a href="website-backup.html">Backup and Recovery</a></li>
                 </ul>
               </div>
             </div>
