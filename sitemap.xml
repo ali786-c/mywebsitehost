@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://zedgehost.com/linux-vps-server.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -152,22 +152,28 @@
   </url>
   <url>
     <loc>https://zedgehost.com/basic-vps-hosting.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zedgehost.com/standard-vps-hosting.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zedgehost.com/professional-vps-hosting.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>  <url>
+  </url>    <url>
+    <loc>https://zedgehost.com/pro-vps-hosting.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
     <loc>https://zedgehost.com/dedicated-server.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
