@@ -87,8 +87,6 @@ const zedgeFooterHTML = `
                   <li><a href="https://my.zedgehost.com/contact.php">Contact us</a></li>
                   <li><a href="https://my.zedgehost.com/knowledgebase/">Knowledge Base</a></li>
                   <li><a href="https://my.zedgehost.com/contact.php">Support</a></li>
-                  <li><a href="siteLock.html">Hosting Security</a></li>
-                  <li><a href="website-backup.html">Backup and Recovery</a></li>
                 </ul>
               </div>
             </div>
