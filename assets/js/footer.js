@@ -69,10 +69,7 @@ const zedgeFooterHTML = `
               <div class="footer__link">
                 <ul class="list-wrap">
                   <li><a href="domain-search.html">Search Domain</a></li>
-                  <li><a href="enterprise-email.html">Enterprise Email</a></li>
-                  <li><a href="bussiness-email.html">Business Email</a></li>
                   <li><a href="https://my.zedgehost.com/cart.php?a=add&amp;domain=transfer">Domain Transfer</a></li>
-                  <li><a href="gaps.html">Google Apps</a></li>
                 </ul>
               </div>
             </div>
