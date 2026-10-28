@@ -165,6 +165,7 @@ const zedgeHeaderHTML = `
                   <div class="dropdown-btn"><span class="plus-line"></span></div></li>
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
+                  <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
               <div class="tgmenu__action">
@@ -328,6 +329,7 @@ const zedgeHeaderHTML = `
                   <div class="dropdown-btn"><span class="plus-line"></span></div></li>
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
+                  <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
       <div class="social-links">

@@ -80,6 +80,7 @@ const zedgeFooterHTML = `
               <div class="footer__link">
                 <ul class="list-wrap">
                   <li><a href="about-us.html">About us</a></li>
+                  <li><a href="blog.html">Blog</a></li>
                   <li><a href="how-it-works.html">How It Works</a></li>
                   <li><a href="https://my.zedgehost.com/contact.php">Contact us</a></li>
                   <li><a href="https://my.zedgehost.com/knowledgebase/">Knowledge Base</a></li>
