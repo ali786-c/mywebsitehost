@@ -166,6 +166,7 @@ const zedgeHeaderHTML = `
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
                   <li><a href="blog.html">Blog</a></li>
+                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener"><span class="server-status-dot" aria-hidden="true"></span>Server Status</a></li>
                 </ul>
               </div>
               <div class="tgmenu__action">
@@ -330,6 +331,7 @@ const zedgeHeaderHTML = `
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
                   <li><a href="blog.html">Blog</a></li>
+                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener"><span class="server-status-dot" aria-hidden="true"></span>Server Status</a></li>
                 </ul>
               </div>
       <div class="social-links">
@@ -414,6 +416,26 @@ if (!document.getElementById("zedge-critical-header-css")) {
         body.mobile-menu-visible .tgmobile__menu-backdrop {
             visibility: visible !important;
             opacity: 1 !important;
+        }
+        /* Server Status link (UptimeRobot status page): green blinking dot */
+        .server-status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 7px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
+            animation: server-status-pulse 2s infinite;
+        }
+        @keyframes server-status-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+            70% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .server-status-dot { animation: none; }
         }
     `;
     document.head.appendChild(criticalStyle);

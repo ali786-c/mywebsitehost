@@ -102,6 +102,9 @@ const zedgeFooterHTML = `
               <a href="https://www.saashub.com/zedgehost?utm_source=badge&amp;utm_campaign=badge&amp;utm_content=zedgehost&amp;badge_variant=color&amp;badge_kind=approved" target="_blank" rel="noopener noreferrer" class="footer__badge-link" style="background: transparent !important; padding: 0 !important; border-radius: 0 !important; display: inline-flex !important; align-items: center; border: none !important; box-shadow: none !important;">
                 <img src="https://cdn-b.saashub.com/img/badges/approved-color.png?v=1" alt="ZedgeHost badge" width="135" height="45" style="max-width: 135px; width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
               </a>
+              <a href="https://stats.uptimerobot.com/XKR1gTaget?utm_source=status_badge&amp;utm_medium=referral" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; margin-left: 12px;" aria-label="ZedgeHost server status">
+                <img src="https://badge.uptimerobot.com/psp/eab350a307d2ffda8207725a67c1784d.svg?style=logo&amp;theme=light" alt="ZedgeHost status" style="height: 20px; width: auto; display: block;">
+              </a>
             </div>
           </div>
         </div>
@@ -117,6 +120,7 @@ const zedgeFooterHTML = `
               <li> <a href="legal.html">Terms &amp; Conditions</a> </li>
               <li> <a href="refund-policy.html">Refund Policy</a> </li>
               <li> <a href="policy.html">Privacy Policy</a> </li>
+              <li> <a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener"><span class="server-status-dot" aria-hidden="true"></span>Server Status</a> </li>
             </ul>
           </div>
         </div>
