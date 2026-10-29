@@ -9,7 +9,7 @@ const zedgeHeaderHTML = `
             <div class="tg-header__top-content-left">
               <p>Offer <span>Hosting Cloud</span> Ultra-fast Performance!</p>
             </div>
-            <a href="cloud-hosting.html" class="tg-header__top-btn" aria-label="Cloud Hosting Offer">Click here</a> </div>
+            <a href="cloud-hosting.html" class="tg-header__top-btn" aria-label="Claim Cloud Hosting Discount">Claim Discount</a> </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="d-flex justify-content-center justify-content-lg-end">
@@ -29,8 +29,8 @@ const zedgeHeaderHTML = `
                 </button>
                 <div class="dropdown-menu">
                   <ul class="top-menu">
-                    <li><a href="javascript:void(0)" onclick="setCurrency('PKR')">PKR</a></li>
-                    <li><a href="javascript:void(0)" onclick="setCurrency('USD')">USD</a></li>
+                    <li><button type="button" class="dropdown-item" onclick="setCurrency('PKR')">PKR</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="setCurrency('USD')">USD</button></li>
                   </ul>
                 </div>
               </li>

@@ -922,3 +922,31 @@
   color: var(--tg-theme-primary);
 }
 
+/* SaasHub Badge in Footer */
+.footer__cart-content-right > a.footer__badge-link,
+.footer__cart-wrap-two .footer__cart-content-right > a.footer__badge-link {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  box-shadow: none !important;
+  border: none !important;
+}
+.footer__cart-content-right > a.footer__badge-link:hover,
+.footer__cart-wrap-two .footer__cart-content-right > a.footer__badge-link:hover {
+  background: transparent !important;
+}
+.footer__cart-content-right > a.footer__badge-link img {
+  max-width: 135px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.25s ease;
+}
+.footer__cart-content-right > a.footer__badge-link:hover img {
+  transform: translateY(-2px);
+}
+
+
