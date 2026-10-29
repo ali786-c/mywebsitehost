@@ -131,13 +131,11 @@ const zedgeFooterHTML = `
 `;
 
 function injectZedgeFooterHTML() {
-    if (document.currentScript && document.currentScript.parentNode) {
+    let footerContainer = document.getElementById("zedge-footer");
+    if (footerContainer) {
+        footerContainer.innerHTML = zedgeFooterHTML;
+    } else if (document.currentScript && document.currentScript.parentNode) {
         document.currentScript.outerHTML = zedgeFooterHTML;
-    } else {
-        let footerContainer = document.getElementById("zedge-footer");
-        if (footerContainer) {
-            footerContainer.innerHTML = zedgeFooterHTML;
-        }
     }
 }
 
