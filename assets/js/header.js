@@ -68,7 +68,7 @@ const zedgeHeaderHTML = `
         <div class="col-12">
           <div class="tgmenu__wrap">
             <nav class="tgmenu__nav">
-              <div class="logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="auto" style="max-height: 42px; width: auto;"></a> </div>
+              <div class="logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="54" style="max-height: 42px; width: auto; aspect-ratio: 160/54;"></a> </div>
               <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
                 <ul class="navigation">
                   <li><a href="index.html">Home</a></li>
@@ -230,7 +230,7 @@ const zedgeHeaderHTML = `
   <div class="tgmobile__menu" style="visibility: hidden; opacity: 0;">
     <nav class="tgmobile__menu-box">
       <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
-      <div class="nav-logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="auto" style="max-height: 42px; width: auto;"></a> </div>
+      <div class="nav-logo"> <a href="https://zedgehost.com/"><img src="Images_WebP/darklogo.png" alt="Zedgehost Logo" width="160" height="54" style="max-height: 42px; width: auto; aspect-ratio: 160/54;"></a> </div>
       <div class="tgmobile__menu-outer"> 
         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> 
       
