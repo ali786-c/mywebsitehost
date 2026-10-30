@@ -72,9 +72,14 @@ body {
 
 /* Blog Article Styles */
 .blog-article {
-  padding: 48px 0 72px;
+  padding: 175px 0 72px;
   background: #FAFAFA;
   color: #1A1A1A;
+}
+@media (max-width: 991.98px) {
+  .blog-article {
+    padding-top: 130px;
+  }
 }
 .blog-article .container {
   max-width: 860px;
@@ -216,9 +221,14 @@ body {
 
 /* Blog Index Page */
 .blog-index {
-  padding: 48px 0 72px;
+  padding: 175px 0 72px;
   background: #FAFAFA;
   color: #1A1A1A;
+}
+@media (max-width: 991.98px) {
+  .blog-index {
+    padding-top: 130px;
+  }
 }
 .blog-index .container {
   max-width: 1080px;
