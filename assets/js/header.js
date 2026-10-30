@@ -1,3 +1,16 @@
+// Google Analytics 4 — ZedgeHost (Account 414122503, Property 561585850, Measurement ID G-C59F3V65XC, created 2026-10-30). header.js runs on every live page, so this loads gtag.js once per page.
+(function () {
+  if (document.querySelector('script[src*="googletagmanager.com/gtag/js?id=G-C59F3V65XC"]')) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-C59F3V65XC';
+  (document.head || document.getElementsByTagName('head')[0]).appendChild(gaScript);
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-C59F3V65XC');
+})();
+
 // Zedgehost Header Component
 const zedgeHeaderHTML = `
 <header class="transparent-header">
