@@ -166,7 +166,7 @@ const zedgeHeaderHTML = `
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
                   <li><a href="blog.html">Blog</a></li>
-                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener"><span class="server-status-dot" aria-hidden="true"></span>Server Status</a></li>
+                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener" class="server-status-pill">Service Status<span class="server-status-dot" aria-hidden="true"></span></a></li>
                 </ul>
               </div>
               <div class="tgmenu__action">
@@ -331,7 +331,7 @@ const zedgeHeaderHTML = `
 
                   <li><a href="https://my.zedgehost.com/contact.php">Contact</a></li>
                   <li><a href="blog.html">Blog</a></li>
-                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener"><span class="server-status-dot" aria-hidden="true"></span>Server Status</a></li>
+                  <li><a href="https://stats.uptimerobot.com/XKR1gTaget" target="_blank" rel="noopener" class="server-status-pill">Service Status<span class="server-status-dot" aria-hidden="true"></span></a></li>
                 </ul>
               </div>
       <div class="social-links">
@@ -417,13 +417,26 @@ if (!document.getElementById("zedge-critical-header-css")) {
             visibility: visible !important;
             opacity: 1 !important;
         }
-        /* Server Status link (UptimeRobot status page): green blinking dot */
+        /* Service Status pill (UptimeRobot status page) */
+        a.server-status-pill {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 14px;
+            border: 1px solid #dbe3ec !important;
+            border-radius: 999px !important;
+            background: #ffffff !important;
+            color: #0f172a !important;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+        a.server-status-pill:hover { background: #f1f5f9 !important; }
         .server-status-dot {
-            display: inline-block;
             width: 8px;
             height: 8px;
-            margin-right: 7px;
-            vertical-align: middle;
+            flex: none;
             border-radius: 50%;
             background: #22c55e;
             box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
