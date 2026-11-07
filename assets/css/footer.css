@@ -1013,3 +1013,129 @@ a.server-status-pill::before {
 
 
 
+
+/* ==========================================================================
+   STRICT CONTAINER LOCK & SCOPED ISOLATION FOR FOOTER (ZedgeHost)
+   ========================================================================== */
+#zedge-footer,
+.footer__area {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#zedge-footer *,
+.footer__area * {
+  box-sizing: border-box;
+}
+
+#zedge-footer .container,
+.footer__area .container,
+.footer__top .container,
+.footer__bottom .container {
+  width: 100% !important;
+  max-width: 1350px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 1500px) {
+  #zedge-footer .container,
+  .footer__area .container,
+  .footer__top .container,
+  .footer__bottom .container {
+    max-width: 1320px !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #zedge-footer .container,
+  .footer__area .container,
+  .footer__top .container,
+  .footer__bottom .container {
+    max-width: 960px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #zedge-footer .container,
+  .footer__area .container,
+  .footer__top .container,
+  .footer__bottom .container {
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #zedge-footer .container,
+  .footer__area .container,
+  .footer__top .container,
+  .footer__bottom .container {
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #zedge-footer .container,
+  .footer__area .container,
+  .footer__top .container,
+  .footer__bottom .container {
+    max-width: 540px !important;
+  }
+}
+
+/* Scoped Resets against rogue global styles from style.css */
+#zedge-footer h2.title,
+.footer__area h2.title {
+  transform: none !important;
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+}
+
+@media (max-width: 767.98px) {
+  #zedge-footer h2.title,
+  .footer__area h2.title {
+    font-size: 1.5rem !important;
+  }
+}
+
+#zedge-footer .footer__widget-title,
+.footer__area .footer__widget-title,
+#zedge-footer h4,
+.footer__area h4 {
+  transform: none !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+  background: transparent !important;
+  color: var(--tg-heading-color, #131415) !important;
+  text-align: left !important;
+  margin-bottom: 20px !important;
+}
+
+#zedge-footer ul,
+.footer__area ul {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+}
+
+#zedge-footer li,
+.footer__area li {
+  width: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  display: block !important;
+}
+
+#zedge-footer a,
+.footer__area a {
+  text-decoration: none !important;
+}
+
+#zedge-footer svg,
+.footer__area svg {
+  transform: none !important;
+}
