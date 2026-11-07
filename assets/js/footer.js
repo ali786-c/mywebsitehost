@@ -150,7 +150,7 @@ if (!document.getElementById("zedge-footer-css")) {
     let cssLink = document.createElement("link");
     cssLink.id = "zedge-footer-css";
     cssLink.rel = "stylesheet";
-    cssLink.href = "assets/css/footer.css?v=20261030b";
+    cssLink.href = "assets/css/footer.css?v=20261107b";
     document.head.appendChild(cssLink);
 }
 

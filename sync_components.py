@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-ZedgeHost - Header & Footer Component Synchronization Script
-=============================================================
+ZedgeHost - Header, Footer & Asset Version Synchronization Script
+==================================================================
 This script ensures that all HTML pages contain:
 1. Direct links to header.css and footer.css in <head> for 0.0s instant styling.
 2. The full static HTML for the header inside #zedge-header.
 3. The full static HTML for the footer inside #zedge-footer.
-4. Preserved interactive JS (header.js, footer.js) without deferred layout shifts.
+4. Cache-busting version tags (?v=VERSION_TAG) on all CSS and JS assets so browsers fetch fresh files.
 """
 
 import os
@@ -27,7 +27,7 @@ SKIP_FILES = {
     'forgot-password.html',
 }
 
-VERSION_TAG = '20261107a'
+VERSION_TAG = '20261107b'
 
 def load_canonical_components():
     with open(HEADER_FILE, 'r', encoding='utf-8') as f:
@@ -36,35 +36,49 @@ def load_canonical_components():
         footer_html = f.read().strip()
     return header_html, footer_html
 
+def bump_asset_versions(content):
+    # Regex to bump or add ?v=VERSION_TAG to our key assets
+    assets = [
+        'assets/css/index-style.css',
+        'assets/css/style.css',
+        'assets/css/header.css',
+        'assets/css/footer.css',
+        'assets/css/blog.css',
+        'assets/js/header.js',
+        'assets/js/footer.js',
+        'assets/js/index-main.js',
+        'assets/js/main.js'
+    ]
+    
+    for asset in assets:
+        escaped = re.escape(asset)
+        pattern = re.compile(rf'{escaped}(?:\?v=[a-zA-Z0-9_\-\.]+)?')
+        content = pattern.sub(f'{asset}?v={VERSION_TAG}', content)
+        
+    return content
+
 def sync_page(filepath, header_html, footer_html):
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
     
-    modified = False
+    orig_content = content
 
     # 1. Ensure header.css and footer.css in <head>
     if 'header.css' not in content:
         header_css_link = f'    <link rel="stylesheet" href="assets/css/header.css?v={VERSION_TAG}">\n'
-        # Insert after existing style link or before </head>
         if 'assets/css/index-style.css' in content:
-            content = content.replace('assets/css/index-style.css">', f'assets/css/index-style.css">\n{header_css_link}')
-            modified = True
+            content = re.sub(r'(assets/css/index-style\.css(?:\?v=[^\"]*)?\">)', r'\1\n' + header_css_link, content, count=1)
         elif 'assets/css/style.css' in content:
-            content = content.replace('assets/css/style.css">', f'assets/css/style.css">\n{header_css_link}')
-            modified = True
+            content = re.sub(r'(assets/css/style\.css(?:\?v=[^\"]*)?\">)', r'\1\n' + header_css_link, content, count=1)
         elif '</head>' in content:
             content = content.replace('</head>', f'{header_css_link}</head>')
-            modified = True
 
     if 'footer.css' not in content:
         footer_css_link = f'    <link rel="stylesheet" href="assets/css/footer.css?v={VERSION_TAG}">\n'
         if 'assets/css/header.css' in content:
-            # Place right after header.css
             content = re.sub(r'(<link[^>]*assets/css/header\.css[^>]*>\n?)', r'\1' + footer_css_link, content, count=1)
-            modified = True
         elif '</head>' in content:
             content = content.replace('</head>', f'{footer_css_link}</head>')
-            modified = True
 
     # 2. Build the wrapped header and footer
     wrapped_header = (
@@ -84,26 +98,21 @@ def sync_page(filepath, header_html, footer_html):
     # 3. Replace #zedge-header
     header_pattern = re.compile(r'<div id=["\']zedge-header["\'][^>]*>[\s\S]*?</div>', re.MULTILINE)
     if header_pattern.search(content):
-        new_content = header_pattern.sub(wrapped_header, content, count=1)
-        if new_content != content:
-            content = new_content
-            modified = True
+        content = header_pattern.sub(wrapped_header, content, count=1)
     
     # 4. Replace #zedge-footer
     footer_pattern = re.compile(r'<div id=["\']zedge-footer["\'][^>]*>[\s\S]*?</div>', re.MULTILINE)
     if footer_pattern.search(content):
-        new_content = footer_pattern.sub(wrapped_footer, content, count=1)
-        if new_content != content:
-            content = new_content
-            modified = True
+        content = footer_pattern.sub(wrapped_footer, content, count=1)
     else:
-        # Check if there is a standalone footer.js script at the bottom of the page
         standalone_footer_script = re.compile(r'<script[^>]*src=["\'][^"\']*assets/js/footer\.js[^"\']*["\'][^>]*></script>', re.MULTILINE)
         if standalone_footer_script.search(content):
             content = standalone_footer_script.sub(wrapped_footer, content, count=1)
-            modified = True
 
-    if modified:
+    # 5. Bump all asset version parameters
+    content = bump_asset_versions(content)
+
+    if content != orig_content:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
         return True
@@ -123,13 +132,13 @@ def main():
             continue
 
         was_synced = sync_page(filepath, header_html, footer_html)
-        status = "SYNCED" if was_synced else "UNCHANGED"
+        status = "BUMPED" if was_synced else "UNCHANGED"
         print(f"[{status}] {filename}")
         if was_synced:
             synced_count += 1
 
     print("\n" + "=" * 50)
-    print(f"Sync Complete! {synced_count} pages updated, {skipped_count} skipped.")
+    print(f"Version Bump & Sync Complete! {synced_count} pages updated to {VERSION_TAG}, {skipped_count} skipped.")
     print("=" * 50)
 
 if __name__ == '__main__':
