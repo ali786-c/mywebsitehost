@@ -390,7 +390,7 @@ if (!document.getElementById("zedge-header-css")) {
     let cssLink = document.createElement("link");
     cssLink.id = "zedge-header-css";
     cssLink.rel = "stylesheet";
-    cssLink.href = "assets/css/header.css?v=20261107b";
+    cssLink.href = "assets/css/header.css";
     document.head.appendChild(cssLink);
 }
 
