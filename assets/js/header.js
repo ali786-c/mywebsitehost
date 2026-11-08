@@ -380,7 +380,9 @@ const zedgeHeaderHTML = `
 function injectZedgeHeaderHTML() {
     let headerContainer = document.getElementById("zedge-header");
     if (headerContainer) {
-        headerContainer.innerHTML = zedgeHeaderHTML;
+        if (!headerContainer.querySelector('header')) {
+            headerContainer.innerHTML = zedgeHeaderHTML;
+        }
     } else if (document.currentScript && document.currentScript.parentNode) {
         document.currentScript.outerHTML = zedgeHeaderHTML;
     }
@@ -432,6 +434,9 @@ if (!document.getElementById("zedge-critical-header-css")) {
     document.head.appendChild(criticalStyle);
 }
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectZedgeHeaderHTML);
+}
 injectZedgeHeaderHTML();
 
 document.addEventListener('click', function(e) {

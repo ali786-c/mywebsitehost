@@ -45,6 +45,9 @@
   --tg-fw-extra-bold: 800;
   --tg-fw-bold: 700;
   --tg-fw-semi-bold: 600;
+  --tg-fw-medium: 500;
+  --tg-fw-regular: 400;
+  --tg-fw-light: 300;
 }
 
 
@@ -1800,5 +1803,294 @@ ul.top-menu li:hover > a, ul.top-menu li.active > a {
 	color: var(--tg-theme-secondary) !important;
 	background: var(--tg-color-gray-3);
 }
+
+/* ==========================================================================
+   Universal Header & Menu Layout Standardization
+   Ensures 100% pixel-perfect consistency across all 53+ pages
+   ========================================================================== */
+
+.transparent-header {
+  position: relative !important;
+  width: 100% !important;
+  z-index: 999;
+}
+
+.transparent-header,
+.transparent-header *,
+.transparent-header *::before,
+.transparent-header *::after {
+  box-sizing: border-box !important;
+}
+
+/* 1. Strict Container Width & Padding Across All Pages (Overrides blog.css etc.) */
+.transparent-header .container,
+#sticky-header .container,
+.tg-header__top .container {
+  max-width: 1320px !important;
+  width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.transparent-header .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+  align-items: center !important;
+}
+
+.transparent-header .row > [class*="col-"] {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* 2. Top Header Consistency */
+.transparent-header .tg-header__top {
+  padding: 8px 0 !important;
+  min-height: 38px !important;
+}
+
+.transparent-header .tg-header__top-content-left p {
+  margin: 0 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13.5px !important;
+  line-height: 1.4 !important;
+}
+
+.transparent-header .tg-header__top-btn {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 3px 12px !important;
+  border-radius: 4px !important;
+}
+
+.transparent-header ul.top-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.transparent-header ul.top-header .dropdown-toggle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 4px 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+/* 3. Sticky Header Bar & Height */
+#sticky-header {
+  height: 76px !important;
+  min-height: 76px !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+#sticky-header.sticky-menu {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  z-index: 9999 !important;
+}
+
+#sticky-header .tgmenu__wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 76px !important;
+}
+
+#sticky-header .tgmenu__nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 4. Logo Sizing */
+.transparent-header .logo {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.transparent-header .logo a {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.transparent-header .logo img {
+  width: 124px !important;
+  height: 42px !important;
+  max-width: 124px !important;
+  max-height: 42px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* 5. Desktop Navigation Menu Items (Locked Font Size, Weight, and Padding) */
+.transparent-header .tgmenu__navbar-wrap.tgmenu__main-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-grow: 1 !important;
+  height: 100% !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+  height: 100% !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li > a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 14px !important;
+  padding: 29px 16px !important;
+  text-transform: capitalize !important;
+  letter-spacing: normal !important;
+  color: #404248 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  height: 100% !important;
+  transition: color 0.25s ease !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li:hover > a,
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li.active > a {
+  color: #2878FF !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li > a svg {
+  margin-left: 2px !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.transparent-header .tgmenu__navbar-wrap > ul.navigation > li:hover > a svg {
+  transform: rotate(180deg) !important;
+}
+
+/* 6. Action Button / Client Area */
+.transparent-header .tgmenu__action {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.transparent-header .tgmenu__action > ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.transparent-header .tgmenu__action .header-btn .btn {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 10px 22px !important;
+  border-radius: 6px !important;
+  line-height: 1.2 !important;
+}
+
+/* 7. Mega-Menu Consistent Dimensions & Alignment */
+.transparent-header .tg-mega-menu-wrap {
+  width: 1150px !important;
+  max-width: calc(100vw - 40px) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #eef2f6 !important;
+  box-sizing: border-box !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(8px) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s !important;
+}
+
+.transparent-header .menu-item-has-children:hover .tg-mega-menu-wrap {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+@media (max-width: 1200px) {
+  .transparent-header .tg-mega-menu-wrap {
+    width: 960px !important;
+  }
+}
+
+/* 8. Responsive Viewports */
+@media (max-width: 991.98px) {
+  .transparent-header .tgmenu__navbar-wrap.tgmenu__main-menu {
+    display: none !important;
+  }
+  .transparent-header .mobile-nav-toggler {
+    display: block !important;
+  }
+  .transparent-header #sticky-header {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+  .transparent-header #sticky-header .tgmenu__wrap {
+    height: 64px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .transparent-header .tgmobile__menu,
+  .transparent-header .tgmobile__menu-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .transparent-header .mobile-nav-toggler {
+    display: none !important;
+  }
+}
+
 
 
