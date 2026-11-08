@@ -13,6 +13,11 @@
     # 2. Redirect HTTP to HTTPS (Force SSL)
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://zedgehost.com/$1 [R=301,L]
+
+    # 3. Redirect Auth pages directly to WHMCS Client Area
+    RewriteRule ^login\.html$ https://my.zedgehost.com/index.php?rp=/login [R=301,L]
+    RewriteRule ^sign-up\.html$ https://my.zedgehost.com/register.php [R=301,L]
+    RewriteRule ^forgot-password\.html$ https://my.zedgehost.com/index.php?rp=/password/reset [R=301,L]
 </IfModule>
 
 # ==============================================================================
