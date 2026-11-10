@@ -430,6 +430,20 @@ if (!document.getElementById("zedge-critical-header-css")) {
             visibility: visible !important;
             opacity: 1 !important;
         }
+        .transparent-header #sticky-header .tgmenu__wrap,
+        .tg-header__area-four .tgmenu__wrap {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+        }
+        .transparent-header .tgmenu__action .header-btn .tg-btn,
+        .transparent-header .tgmenu__action .header-btn .btn {
+            background-color: #2A862E !important;
+            border: 1px solid #2A862E !important;
+            color: #ffffff !important;
+        }
     `;
     document.head.appendChild(criticalStyle);
 }
