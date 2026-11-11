@@ -11,6 +11,21 @@
   window.gtag('config', 'G-C59F3V65XC');
 })();
 
+// Meta Pixel — ZedgeHost (Dataset/Pixel ID 1712485387131323, created 2026-11-10). header.js runs on every live page, so this loads fbevents.js once per page.
+(function () {
+  if (window.fbq) return;
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1712485387131323');
+  fbq('track', 'PageView');
+})();
+
 // Zedgehost Header Component
 const zedgeHeaderHTML = `
 <header class="transparent-header">
